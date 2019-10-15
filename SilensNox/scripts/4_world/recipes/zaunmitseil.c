@@ -1,4 +1,4 @@
-class LOA_ZaunSeilMike extends RecipeBase
+class SN_ZaunSeilMike extends RecipeBase
 {	
 	override void Init()
 	{
@@ -49,7 +49,7 @@ class LOA_ZaunSeilMike extends RecipeBase
 		//----------------------------------------------------------------------------------------------------------------------
 		
 		//result1
-		AddResult("LOA_ZaunMitSeil");//add results here
+		AddResult("SN_ZaunMitSeil");//add results here
 
 		m_ResultSetFullQuantity[0] = false;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = -1;//-1 = do nothing

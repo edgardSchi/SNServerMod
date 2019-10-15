@@ -1,6 +1,6 @@
-class LOA_Target extends Inventory_Base
+class SN_Target extends Inventory_Base
 {
-	//void LOA_Target
+	//void SN_Target
 	//{
 	//}
 	

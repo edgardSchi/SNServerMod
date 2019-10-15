@@ -1,1 +1,1 @@
-class Ammo_LOABolt: Ammunition_Base {};
+class Ammo_SNBolt: Ammunition_Base {};

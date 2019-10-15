@@ -8,8 +8,8 @@ modded class LoadingScreen
 		Class.CastTo(m_ImageLogoCorner, m_WidgetRoot.FindAnyWidget("ImageLogoCorner"));
 		m_ImageLogoMid.Show(false);
 		m_ImageLogoCorner.Show(false);		
-		m_ImageBackground.LoadImageFile(0, "LandOfAnonymus/icons/ServerImage.paa");
-		m_ImageBackground.LoadMaskTexture("LandOfAnonymus/icons/ServerImage.paa");
+		m_ImageBackground.LoadImageFile(0, "SilensNox/icons/ServerImage.paa");
+		m_ImageBackground.LoadMaskTexture("SilensNox/icons/ServerImage.paa");
 		ProgressAsync.SetUserData(m_ImageBackground);
 		m_ModdedWarning.Show(false);
 	}
@@ -55,8 +55,8 @@ modded class LoginQueueBase {
 	override Widget Init() {
 		Widget w = super.Init();
 		ImageWidget imageWidgetBackground = ImageWidget.Cast( layoutRoot.FindAnyWidget("Background") );
-		imageWidgetBackground.LoadMaskTexture("LandOfAnonymus/icons/ServerImage.paa");
-		imageWidgetBackground.LoadImageFile(0, "LandOfAnonymus/icons/ServerImage.paa");
+		imageWidgetBackground.LoadMaskTexture("SilensNox/icons/ServerImage.paa");
+		imageWidgetBackground.LoadImageFile(0, "SilensNox/icons/ServerImage.paa");
 		return w;
 	}
 }
@@ -66,8 +66,8 @@ modded class LoginTimeBase {
 	override Widget Init() {
 		Widget w = super.Init();
 		ImageWidget imageWidgetBackground = ImageWidget.Cast( layoutRoot.FindAnyWidget("Background") );
-		imageWidgetBackground.LoadMaskTexture("LandOfAnonymus/icons/ServerImage.paa");
-		imageWidgetBackground.LoadImageFile(0, "LandOfAnonymus/icons/ServerImage.paa");
+		imageWidgetBackground.LoadMaskTexture("SilensNox/icons/ServerImage.paa");
+		imageWidgetBackground.LoadImageFile(0, "SilensNox/icons/ServerImage.paa");
 		return w;
 	}	
 }

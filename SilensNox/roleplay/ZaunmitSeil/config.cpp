@@ -30,7 +30,7 @@ class CfgVehicles
 		physLayer="item_large";
 		attachments[]=
 		{
-			"shoulder",
+			"shoulder2",
 			"Back",
 			"Gloves"
 		};

@@ -1,4 +1,4 @@
-class LOA_SodaCan_ColorBase : Bottle_Base
+class SN_SodaCan_ColorBase : Bottle_Base
 {
 	override string GetEmptyingLoopSoundsetHard()
 	{
@@ -38,7 +38,7 @@ class LOA_SodaCan_ColorBase : Bottle_Base
 	override bool CanPutInCargo( EntityAI parent )
 	{
 		if ( !super.CanPutInCargo(parent) ) {return false;}	
-		if ( !(parent.IsKindOf("LOA_SodaCan_ColorBase"))/* && !(parent.IsKindOf("Container_Base"))*/)
+		if ( !(parent.IsKindOf("SN_SodaCan_ColorBase"))/* && !(parent.IsKindOf("Container_Base"))*/)
 		{
 			return true;
 		}

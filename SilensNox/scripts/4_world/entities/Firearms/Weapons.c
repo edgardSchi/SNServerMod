@@ -1,4 +1,4 @@
-class LOA_Ruger1022 : AKM_Base
+class SN_Ruger1022 : AKM_Base
 {
 	override RecoilBase SpawnRecoilObject()
 	{
@@ -22,7 +22,7 @@ class LOA_Ruger1022 : AKM_Base
 		return chanceToJam;
 	}
 }
-class LOA_Trumpet : Mp133Shotgun_Base
+class SN_Trumpet : Mp133Shotgun_Base
 {
 	override RecoilBase SpawnRecoilObject()
 	{

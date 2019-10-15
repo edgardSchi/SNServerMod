@@ -542,7 +542,7 @@ modded class CraftJointMung extends RecipeBase
 		//----------------------------------------------------------------------------------------------------------------------
 		
 		//result1
-		AddResult("LOA_joint_mung_unlit");//add results here
+		AddResult("SN_joint_mung_unlit");//add results here
 
 		m_ResultSetFullQuantity[0] = true;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = -1;//-1 = do nothing

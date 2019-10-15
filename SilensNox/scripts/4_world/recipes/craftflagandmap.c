@@ -1,4 +1,4 @@
-class LOA_Craftflag extends RecipeBase
+class SN_Craftflag extends RecipeBase
 {	
 	override void Init()
 	{
@@ -43,7 +43,7 @@ class LOA_Craftflag extends RecipeBase
 		//----------------------------------------------------------------------------------------------------------------------
 		
 		//result1
-		AddResult("LOA_ChernarussianFlag");//add results here
+		AddResult("SN_ChernarussianFlag");//add results here
 
 		m_ResultSetFullQuantity[0] = false;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = -1;//-1 = do nothing
@@ -65,7 +65,7 @@ class LOA_Craftflag extends RecipeBase
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
-class LOA_CraftMap extends RecipeBase
+class SN_CraftMap extends RecipeBase
 {	
 	override void Init()
 	{
@@ -110,7 +110,7 @@ class LOA_CraftMap extends RecipeBase
 		//----------------------------------------------------------------------------------------------------------------------
 		
 		//result1
-		AddResult("LOA_ChernarussianMap");//add results here
+		AddResult("SN_ChernarussianMap");//add results here
 
 		m_ResultSetFullQuantity[0] = false;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = -1;//-1 = do nothing

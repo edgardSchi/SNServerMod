@@ -1,11 +1,11 @@
-class LOA_cigarette_mung_lit : Clothing
+class SN_cigarette_mung_lit : Clothing
 {
 	Particle 				m_SmokeParticle;
 	bool attached = false;
 	vector 					m_ParticleLocalPos = Vector(0, 0, 0);
 		
 	
-	void LOA_cigarette_mung_lit()
+	void SN_cigarette_mung_lit()
 	{	
 		init();	
 	}
@@ -21,7 +21,7 @@ class LOA_cigarette_mung_lit : Clothing
 		//smokeupdate();				
 	}
 	
-	void ~LOA_cigarette_mung_lit()
+	void ~SN_cigarette_mung_lit()
 	{
 		StopAllParticles();
 	}
@@ -40,5 +40,5 @@ class LOA_cigarette_mung_lit : Clothing
 		AddAction(ActionRauchen);
 	}	
 }
-class LOA_joint_mung_lit : LOA_cigarette_mung_lit {}
-class LOA_cigar_mung_lit : LOA_cigarette_mung_lit {}
+class SN_joint_mung_lit : SN_cigarette_mung_lit {}
+class SN_cigar_mung_lit : SN_cigarette_mung_lit {}

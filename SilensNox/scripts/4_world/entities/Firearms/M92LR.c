@@ -1,7 +1,7 @@
-class LOA_M92FS22LR : Pistol_Base
+class SN_M92FS22LR : Pistol_Base
 {
 	override RecoilBase SpawnRecoilObject()
 	{
-		return new LOA_M92FS22LRRecoil(this);
+		return new SN_M92FS22LRRecoil(this);
 	}
 };

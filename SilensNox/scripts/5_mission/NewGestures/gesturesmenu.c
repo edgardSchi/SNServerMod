@@ -1,4 +1,4 @@
-enum LOAGestureCategories: GestureCategories
+enum SNGestureCategories: GestureCategories
 {
 	CATEGORY_6
 }
@@ -21,7 +21,7 @@ modded class GesturesMenu
 		if ( category == GestureCategories.CATEGORIES )
 		{
 			gesture_items.Insert( new GestureMenuItem( GestureCategories.CATEGORY_5, "Körperemotes", 						GestureCategories.CATEGORIES ) );
-			gesture_items.Insert( new GestureMenuItem( LOAGestureCategories.CATEGORY_6, "Körperhaltung", 						GestureCategories.CATEGORIES ) );
+			gesture_items.Insert( new GestureMenuItem( SNGestureCategories.CATEGORY_6, "Körperhaltung", 						GestureCategories.CATEGORIES ) );
 		}
 		
 		else if ( category == GestureCategories.CATEGORY_5 )
@@ -36,13 +36,13 @@ modded class GesturesMenu
 			
 		}
 		
-		else if ( category == LOAGestureCategories.CATEGORY_6 )
+		else if ( category == SNGestureCategories.CATEGORY_6 )
 		{
-			gesture_items.Insert( new GestureMenuItem( ID_EMOTE_HEALTHY, 				"Gesund",						 	LOAGestureCategories.CATEGORY_6 ) );
-			gesture_items.Insert( new GestureMenuItem( ID_EMOTE_WORN, 					"Schmerzend", 						LOAGestureCategories.CATEGORY_6 ) );
-			gesture_items.Insert( new GestureMenuItem( ID_EMOTE_DAMAGED,		 		"Verletzt",							LOAGestureCategories.CATEGORY_6 ) );
-			gesture_items.Insert( new GestureMenuItem( ID_EMOTE_BADLYDAMAGED, 			"Stark Verletzt",					LOAGestureCategories.CATEGORY_6 ) );
-			gesture_items.Insert( new GestureMenuItem( ID_EMOTE_RUINED, 				"Fasst Tod",						LOAGestureCategories.CATEGORY_6 ) );
+			gesture_items.Insert( new GestureMenuItem( ID_EMOTE_HEALTHY, 				"Gesund",						 	SNGestureCategories.CATEGORY_6 ) );
+			gesture_items.Insert( new GestureMenuItem( ID_EMOTE_WORN, 					"Schmerzend", 						SNGestureCategories.CATEGORY_6 ) );
+			gesture_items.Insert( new GestureMenuItem( ID_EMOTE_DAMAGED,		 		"Verletzt",							SNGestureCategories.CATEGORY_6 ) );
+			gesture_items.Insert( new GestureMenuItem( ID_EMOTE_BADLYDAMAGED, 			"Stark Verletzt",					SNGestureCategories.CATEGORY_6 ) );
+			gesture_items.Insert( new GestureMenuItem( ID_EMOTE_RUINED, 				"Fasst Tod",						SNGestureCategories.CATEGORY_6 ) );
 			
 		}
 	}

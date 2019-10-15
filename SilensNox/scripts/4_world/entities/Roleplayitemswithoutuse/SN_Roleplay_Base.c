@@ -1,4 +1,4 @@
-class LOA_Roleplay_Base extends Container_Base
+class SN_Roleplay_Base extends Container_Base
 {
 	override bool IsTwoHandedBehaviour() 
     {

@@ -1,13 +1,13 @@
-class LOA_Barrel_Base: Bottle_Base
+class SN_Barrel_Base: Bottle_Base
 {
 	
 	
-	void LOA_Barrel_Base()
+	void SN_Barrel_Base()
 	{
 		m_LiquidEmptyRate = 2000;
 	}
 	
-	void ~LOA_Barrel_Base()
+	void ~SN_Barrel_Base()
 	{
 
 	}
@@ -55,7 +55,7 @@ class LOA_Barrel_Base: Bottle_Base
 	override bool CanPutInCargo( EntityAI parent )
 	{
 		if( !super.CanPutInCargo(parent) ) {return false;}	
-		if ( !(parent.IsKindOf("LOA_Barrel_Base"))/* && !(parent.IsKindOf("Container_Base"))*/)
+		if ( !(parent.IsKindOf("SN_Barrel_Base"))/* && !(parent.IsKindOf("Container_Base"))*/)
 		{
 			return true;
 		}

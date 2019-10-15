@@ -1,6 +1,6 @@
-class LOA_Boombox extends LOA_Target
+class SN_Boombox extends SN_Target
 {
-	//void LOA_Target
+	//void SN_Target
 	//{
 	//}
 	/*override void SetActions()

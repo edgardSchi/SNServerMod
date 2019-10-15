@@ -1,11 +1,11 @@
-const string LOA_IP = "176.57.168.220";
+const string SN_IP = "176.57.168.220";
 const int PORT = 2602;
 
 modded class MainMenu
 {
 	override Widget Init()
 	{
-		layoutRoot = GetGame().GetWorkspace().CreateWidgets( "LandOfAnonymus/gui/main_menu.layout" );
+		layoutRoot = GetGame().GetWorkspace().CreateWidgets( "SilensNox/gui/main_menu.layout" );
 		
 		m_Play						= layoutRoot.FindAnyWidget( "play" );
 		m_ChooseServer				= layoutRoot.FindAnyWidget( "choose_server" );
@@ -72,8 +72,8 @@ modded class MainMenu
 	
 	
 	
-	void ConnectToLoA() {
-      g_Game.ConnectFromServerBrowser( LOA_IP, PORT, "" );
+	void ConnectToSN() {
+      g_Game.ConnectFromServerBrowser( SN_IP, PORT, "" );
     }
 
     override void Play()
@@ -87,7 +87,7 @@ modded class MainMenu
             }
         }
 
-        GetGame().GetCallQueue(CALL_CATEGORY_GUI).CallByName(this, "ConnectToLoA");
+        GetGame().GetCallQueue(CALL_CATEGORY_GUI).CallByName(this, "ConnectToSN");
     }
 
     override bool OnMouseEnter( Widget w, int x, int y )
@@ -102,7 +102,7 @@ modded class MainMenu
 				int charID = m_ScenePC.GetIntroCharacter().GetCharacterID();
 				m_ScenePC.GetIntroCharacter().GetLastPlayedServer(charID, ip, port);
 				
-				m_LastPlayedTooltipIP.SetText( "Auf den LOA" );
+				m_LastPlayedTooltipIP.SetText( "Auf den SN" );
 				m_LastPlayedTooltipPort.SetText( "Server verbinden" );
 				
 				m_LastPlayedTooltipTimer.FadeIn( m_LastPlayedTooltip, 0.3, true );

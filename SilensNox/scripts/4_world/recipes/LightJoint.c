@@ -24,7 +24,7 @@ class LightJoint extends RecipeBase
 		
 		//INGREDIENTS
 		//ingredient 1
-		InsertIngredient(0,"LOA_joint_mung_unlit");//you can insert multiple ingredients this way
+		InsertIngredient(0,"SN_joint_mung_unlit");//you can insert multiple ingredients this way
 		
 		m_IngredientAddHealth[0] = 0;// 0 = do nothing
 		m_IngredientSetHealth[0] = -1; // -1 = do nothing
@@ -35,9 +35,9 @@ class LightJoint extends RecipeBase
 		//ingredient 2
 		InsertIngredient(1,"Torch");//you can insert multiple ingredients this way
 		InsertIngredient(1,"Matchbox");
-		InsertIngredient(1,"LOA_joint_mung_lit");
-		InsertIngredient(1,"LOA_cigar_mung_lit");
-		InsertIngredient(1,"LOA_cigarette_mung_lit");
+		InsertIngredient(1,"SN_joint_mung_lit");
+		InsertIngredient(1,"SN_cigar_mung_lit");
+		InsertIngredient(1,"SN_cigarette_mung_lit");
 		InsertIngredient(1,"Zippo_new");
 		
 		
@@ -49,7 +49,7 @@ class LightJoint extends RecipeBase
 		//----------------------------------------------------------------------------------------------------------------------
 		
 		//result1
-		AddResult("LOA_joint_mung_lit");//add results here
+		AddResult("SN_joint_mung_lit");//add results here
 
 		m_ResultSetFullQuantity[0] = false;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = -1;//-1 = do nothing

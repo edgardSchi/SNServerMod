@@ -10,43 +10,43 @@ modded class PluginRecipesManager
 		RegisterRecipe(new LightJoint);
 		RegisterRecipe(new LightCigar);
 		RegisterRecipe(new fingerlesshandschuhe);
-		RegisterRecipe(new LOA_T1Arrow);
-		RegisterRecipe(new LOA_T2Arrow);
-		RegisterRecipe(new LOA_T3Arrow);
+		RegisterRecipe(new SN_T1Arrow);
+		RegisterRecipe(new SN_T2Arrow);
+		RegisterRecipe(new SN_T3Arrow);
 		RegisterRecipe(new craft_potted_plant2);
 		RegisterRecipe(new stupidcraftingrecipefixcanopy);
 		
-		RegisterRecipe(new LOA_Leathergloves);
-		RegisterRecipe(new LOA_LeatherglovesBeige);
-		RegisterRecipe(new LOA_LeatherglovesBrown);
-		RegisterRecipe(new LOA_LeatherglovesBlack);
+		RegisterRecipe(new SN_Leathergloves);
+		RegisterRecipe(new SN_LeatherglovesBeige);
+		RegisterRecipe(new SN_LeatherglovesBrown);
+		RegisterRecipe(new SN_LeatherglovesBlack);
 		
-		RegisterRecipe(new LOA_LeatherHat);
-		RegisterRecipe(new LOA_LeathatBeige);
-		RegisterRecipe(new LOA_LeathatBrown);
-		RegisterRecipe(new LOA_LeathatBlack);
+		RegisterRecipe(new SN_LeatherHat);
+		RegisterRecipe(new SN_LeathatBeige);
+		RegisterRecipe(new SN_LeathatBrown);
+		RegisterRecipe(new SN_LeathatBlack);
 		
-		RegisterRecipe(new LOA_LeatherPants);
-		RegisterRecipe(new LOA_LeatherPants_Beige);
-		RegisterRecipe(new LOA_LeatherPants_Brown);
-		RegisterRecipe(new LOA_LeatherPants_Black);
+		RegisterRecipe(new SN_LeatherPants);
+		RegisterRecipe(new SN_LeatherPants_Beige);
+		RegisterRecipe(new SN_LeatherPants_Brown);
+		RegisterRecipe(new SN_LeatherPants_Black);
 		
-		RegisterRecipe(new LOA_LeatherShoes_Natural);
-		RegisterRecipe(new LOA_LeatherShoes_Beige);
-		RegisterRecipe(new LOA_LeatherShoes_Brown);
-		RegisterRecipe(new LOA_LeatherShoes_Black);
+		RegisterRecipe(new SN_LeatherShoes_Natural);
+		RegisterRecipe(new SN_LeatherShoes_Beige);
+		RegisterRecipe(new SN_LeatherShoes_Brown);
+		RegisterRecipe(new SN_LeatherShoes_Black);
 		
-		RegisterRecipe(new LOA_LeatherShirt);
+		RegisterRecipe(new SN_LeatherShirt);
 		
-		RegisterRecipe(new LOA_LeatherStorageVest_Natural);
-		RegisterRecipe(new LOA_LeatherStorageVest_Beige);
-		RegisterRecipe(new LOA_LeatherStorageVest_Brown);
-		RegisterRecipe(new LOA_LeatherStorageVest_Black);
+		RegisterRecipe(new SN_LeatherStorageVest_Natural);
+		RegisterRecipe(new SN_LeatherStorageVest_Beige);
+		RegisterRecipe(new SN_LeatherStorageVest_Brown);
+		RegisterRecipe(new SN_LeatherStorageVest_Black);
 		
-		RegisterRecipe(new LOA_ZaunSeilMike);
+		RegisterRecipe(new SN_ZaunSeilMike);
 		
-		RegisterRecipe(new LOA_CraftMap);
-		RegisterRecipe(new LOA_Craftflag);
+		RegisterRecipe(new SN_CraftMap);
+		RegisterRecipe(new SN_Craftflag);
 		
 		RegisterRecipe(new PaintFirefighterAxe);
 		RegisterRecipe(new PaintGhillieHoodGreen);

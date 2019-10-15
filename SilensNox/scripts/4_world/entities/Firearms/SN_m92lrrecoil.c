@@ -1,4 +1,4 @@
-class LOA_M92FS22LRRecoil: RecoilBase
+class SN_M92FS22LRRecoil: RecoilBase
 {
 	override void Init()
 	{

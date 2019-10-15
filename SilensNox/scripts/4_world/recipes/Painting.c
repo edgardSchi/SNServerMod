@@ -101,7 +101,7 @@ modded class PaintRuger1022 extends RecipeBase
 		m_IngredientUseSoftSkills[0] = true;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2
-		InsertIngredient(1,"LOA_Ruger1022");//you can insert multiple ingredients this way
+		InsertIngredient(1,"SN_Ruger1022");//you can insert multiple ingredients this way
 		
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1; // -1 = do nothing
@@ -132,7 +132,7 @@ modded class PaintRuger1022 extends RecipeBase
 
 	override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)
 	{
-		PaintItem.Paint(ingredients[0], ingredients[1], "LOA_Ruger1022", player, specialty_weight);
+		PaintItem.Paint(ingredients[0], ingredients[1], "SN_Ruger1022", player, specialty_weight);
 	}
 };
 

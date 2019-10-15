@@ -1,4 +1,4 @@
-class LOA_Leathergloves extends RecipeBase
+class SN_Leathergloves extends RecipeBase
 {	
 	override void Init()
 	{
@@ -63,7 +63,7 @@ class LOA_Leathergloves extends RecipeBase
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
-class LOA_LeatherglovesBeige extends RecipeBase
+class SN_LeatherglovesBeige extends RecipeBase
 {	
 	override void Init()
 	{
@@ -128,7 +128,7 @@ class LOA_LeatherglovesBeige extends RecipeBase
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
-class LOA_LeatherglovesBrown extends RecipeBase
+class SN_LeatherglovesBrown extends RecipeBase
 {	
 	override void Init()
 	{
@@ -193,7 +193,7 @@ class LOA_LeatherglovesBrown extends RecipeBase
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
-class LOA_LeatherglovesBlack extends RecipeBase
+class SN_LeatherglovesBlack extends RecipeBase
 {	
 	override void Init()
 	{
@@ -259,7 +259,7 @@ class LOA_LeatherglovesBlack extends RecipeBase
 	}
 };
 
-class LOA_LeatherHat extends RecipeBase
+class SN_LeatherHat extends RecipeBase
 {	
 	override void Init()
 	{
@@ -324,7 +324,7 @@ class LOA_LeatherHat extends RecipeBase
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
-class LOA_LeathatBeige extends RecipeBase
+class SN_LeathatBeige extends RecipeBase
 {	
 	override void Init()
 	{
@@ -389,7 +389,7 @@ class LOA_LeathatBeige extends RecipeBase
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
-class LOA_LeathatBrown extends RecipeBase
+class SN_LeathatBrown extends RecipeBase
 {	
 	override void Init()
 	{
@@ -454,7 +454,7 @@ class LOA_LeathatBrown extends RecipeBase
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
-class LOA_LeathatBlack extends RecipeBase
+class SN_LeathatBlack extends RecipeBase
 {	
 	override void Init()
 	{
@@ -520,7 +520,7 @@ class LOA_LeathatBlack extends RecipeBase
 	}
 };
 
-class LOA_LeatherPants extends RecipeBase
+class SN_LeatherPants extends RecipeBase
 {	
 	override void Init()
 	{
@@ -585,7 +585,7 @@ class LOA_LeatherPants extends RecipeBase
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
-class LOA_LeatherPants_Beige extends RecipeBase
+class SN_LeatherPants_Beige extends RecipeBase
 {	
 	override void Init()
 	{
@@ -650,7 +650,7 @@ class LOA_LeatherPants_Beige extends RecipeBase
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
-class LOA_LeatherPants_Brown extends RecipeBase
+class SN_LeatherPants_Brown extends RecipeBase
 {	
 	override void Init()
 	{
@@ -715,7 +715,7 @@ class LOA_LeatherPants_Brown extends RecipeBase
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
-class LOA_LeatherPants_Black extends RecipeBase
+class SN_LeatherPants_Black extends RecipeBase
 {	
 	override void Init()
 	{
@@ -781,7 +781,7 @@ class LOA_LeatherPants_Black extends RecipeBase
 	}
 };
 
-class LOA_LeatherShoes_Natural extends RecipeBase
+class SN_LeatherShoes_Natural extends RecipeBase
 {	
 	override void Init()
 	{
@@ -846,7 +846,7 @@ class LOA_LeatherShoes_Natural extends RecipeBase
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
-class LOA_LeatherShoes_Beige extends RecipeBase
+class SN_LeatherShoes_Beige extends RecipeBase
 {	
 	override void Init()
 	{
@@ -911,7 +911,7 @@ class LOA_LeatherShoes_Beige extends RecipeBase
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
-class LOA_LeatherShoes_Brown extends RecipeBase
+class SN_LeatherShoes_Brown extends RecipeBase
 {	
 	override void Init()
 	{
@@ -976,7 +976,7 @@ class LOA_LeatherShoes_Brown extends RecipeBase
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
-class LOA_LeatherShoes_Black extends RecipeBase
+class SN_LeatherShoes_Black extends RecipeBase
 {	
 	override void Init()
 	{
@@ -1042,7 +1042,7 @@ class LOA_LeatherShoes_Black extends RecipeBase
 	}
 };
 
-class LOA_LeatherJacket_Natural extends RecipeBase
+class SN_LeatherJacket_Natural extends RecipeBase
 {	
 	override void Init()
 	{
@@ -1107,7 +1107,7 @@ class LOA_LeatherJacket_Natural extends RecipeBase
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
-class LOA_LeatherJacket_Beige extends RecipeBase
+class SN_LeatherJacket_Beige extends RecipeBase
 {	
 	override void Init()
 	{
@@ -1172,7 +1172,7 @@ class LOA_LeatherJacket_Beige extends RecipeBase
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
-class LOA_LeatherJacket_Brown extends RecipeBase
+class SN_LeatherJacket_Brown extends RecipeBase
 {	
 	override void Init()
 	{
@@ -1237,7 +1237,7 @@ class LOA_LeatherJacket_Brown extends RecipeBase
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
-class LOA_LeatherJacket_Black extends RecipeBase
+class SN_LeatherJacket_Black extends RecipeBase
 {	
 	override void Init()
 	{
@@ -1308,7 +1308,7 @@ class LOA_LeatherJacket_Black extends RecipeBase
 
 
 
-class LOA_LeatherShirt extends RecipeBase
+class SN_LeatherShirt extends RecipeBase
 {	
 	override void Init()
 	{
@@ -1374,7 +1374,7 @@ class LOA_LeatherShirt extends RecipeBase
 	}
 };
 
-class LOA_LeatherStorageVest_Natural extends RecipeBase
+class SN_LeatherStorageVest_Natural extends RecipeBase
 {	
 	override void Init()
 	{
@@ -1439,7 +1439,7 @@ class LOA_LeatherStorageVest_Natural extends RecipeBase
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
-class LOA_LeatherStorageVest_Beige extends RecipeBase
+class SN_LeatherStorageVest_Beige extends RecipeBase
 {	
 	override void Init()
 	{
@@ -1504,7 +1504,7 @@ class LOA_LeatherStorageVest_Beige extends RecipeBase
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
-class LOA_LeatherStorageVest_Brown extends RecipeBase
+class SN_LeatherStorageVest_Brown extends RecipeBase
 {	
 	override void Init()
 	{
@@ -1569,7 +1569,7 @@ class LOA_LeatherStorageVest_Brown extends RecipeBase
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
-class LOA_LeatherStorageVest_Black extends RecipeBase
+class SN_LeatherStorageVest_Black extends RecipeBase
 {	
 	override void Init()
 	{

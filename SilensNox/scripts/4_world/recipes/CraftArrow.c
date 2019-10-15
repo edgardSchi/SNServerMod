@@ -1,4 +1,4 @@
-class LOA_T2Arrow extends RecipeBase
+class SN_T2Arrow extends RecipeBase
 {
 	override void Init()
 	{
@@ -32,7 +32,7 @@ class LOA_T2Arrow extends RecipeBase
 		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2
-		InsertIngredient(1,"Ammo_LOAT1Arrow");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Ammo_SNT1Arrow");//you can insert multiple ingredients this way
 		
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1; // -1 = do nothing
@@ -42,7 +42,7 @@ class LOA_T2Arrow extends RecipeBase
 		//----------------------------------------------------------------------------------------------------------------------
 		
 		//result1
-		AddResult("Ammo_LOAT2Arrow");//add results here
+		AddResult("Ammo_SNT2Arrow");//add results here
 
 		m_ResultSetFullQuantity[0] = false;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = 1;//-1 = do nothing
@@ -64,7 +64,7 @@ class LOA_T2Arrow extends RecipeBase
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
-class LOA_T1Arrow extends RecipeBase
+class SN_T1Arrow extends RecipeBase
 {	
 	override void Init()
 	{
@@ -127,7 +127,7 @@ class LOA_T1Arrow extends RecipeBase
 		//AddResult("CombatKnife");//additional results, must be processed individually in Do method (as "results" parameter)
 		
 		
-		AddResult("Ammo_LOAT1Arrow");//single result
+		AddResult("Ammo_SNT1Arrow");//single result
 
 		m_ResultSetFullQuantity[0] = 0;
 		m_ResultSetQuantity[0] = 1;
@@ -149,7 +149,7 @@ class LOA_T1Arrow extends RecipeBase
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
-class LOA_T3Arrow extends RecipeBase
+class SN_T3Arrow extends RecipeBase
 {
 	override void Init()
 	{
@@ -184,7 +184,7 @@ class LOA_T3Arrow extends RecipeBase
 		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		//ingredient 2
-		InsertIngredient(1,"Ammo_LOAT2Arrow");//you can insert multiple ingredients this way
+		InsertIngredient(1,"Ammo_SNT2Arrow");//you can insert multiple ingredients this way
 		
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1; // -1 = do nothing
@@ -194,7 +194,7 @@ class LOA_T3Arrow extends RecipeBase
 		//----------------------------------------------------------------------------------------------------------------------
 		
 		//result1
-		AddResult("Ammo_LOAT3Arrow");//add results here
+		AddResult("Ammo_SNT3Arrow");//add results here
 
 		m_ResultSetFullQuantity[0] = false;//true = set full quantity, false = do nothing
 		m_ResultSetQuantity[0] = 1;//-1 = do nothing

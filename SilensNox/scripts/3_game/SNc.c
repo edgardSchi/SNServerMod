@@ -15,7 +15,7 @@ const int ID_EMOTE_RUINED			= 75;
 const int ID_EMOTE_BLOODYHANDS		= 76;
 
 
-/*enum LOAPlayerConstants
+/*enum SNPlayerConstants
 {
 	CMD_GESTUREFB_GUN_ON_SHOULDER		= 4002;
 };*/

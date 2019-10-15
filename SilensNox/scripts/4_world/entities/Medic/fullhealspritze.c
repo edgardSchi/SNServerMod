@@ -1,4 +1,4 @@
-class Healsyringe: Inventory_Base
+class SN_Healsyringe: Inventory_Base
 {
 	override void SetActions()
 	{
