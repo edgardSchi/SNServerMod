@@ -23,6 +23,9 @@ modded class PlayerBase
 			DayzPlayerItemBehaviorCfg     toolsOneHanded = new DayzPlayerItemBehaviorCfg;
 			toolsOneHanded.SetToolsOneHanded();
 			
+			
+			GetDayZPlayerType().AddItemInHandsProfileIK("SN_Kunai", "dz/anims/workspaces/player/player_main/weapons/player_main_1h_knife.asi", toolsOneHanded, 		"dz/anims/anm/player/ik/gear/kitchenknife.anm");
+			
 			GetDayZPlayerType().AddItemInHandsProfileIK("SN_USBStick", "dz/anims/workspaces/player/player_main/player_main_1h.asi", toolsOneHanded, 						"dz/anims/anm/player/ik/gear/9v_battery.anm");
 			
 			GetDayZPlayerType().AddItemInHandsProfileIK("SN_SodaCan_ColorBase", "dz/anims/workspaces/player/player_main/props/player_main_1h_sodacan.asi", toolsOneHanded,	"dz/anims/anm/player/ik/gear/soda_can.anm");	
