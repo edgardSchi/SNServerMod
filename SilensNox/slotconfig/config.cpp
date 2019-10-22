@@ -15,6 +15,7 @@ class CfgVehicles
 {
 	class RifleCore;
 	class PistolCore;
+	class Inventory_Base;
 	class Rifle_Base: RifleCore
 	{
 		inventorySlot[]=
@@ -28,7 +29,7 @@ class CfgVehicles
 		{
 			"Shoulder"
 		};
-	};*/	
+	};*/
 };
 class CfgSlots
 {
@@ -124,6 +125,12 @@ class CfgSlots
 		displayName="SNFruitsBig_3";
 		ghostIcon="plant";
 	};
+	class Slot_SNKatanaSlot
+	{
+		name="SNKatanaSlot";
+		displayName="SNKatanaSlot";
+		ghostIcon="knife";
+	};
 };
 
 class CfgNonAIVehicles
@@ -200,5 +207,11 @@ class CfgNonAIVehicles
 		scope=2
 		inventorySlot="Gloves";
 		model="SilensNox\roleplay\Proxies\SNGloves.p3d";
+	}
+	class ProxySNKatana: ProxyAttachment
+	{
+		scope=2;
+		inventorySlot="SNKatanaSlot";
+		model="SilensNox\roleplay\Proxies\SNKatana.p3d";
 	}
 };

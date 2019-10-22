@@ -26,6 +26,8 @@ modded class PlayerBase
 			
 			GetDayZPlayerType().AddItemInHandsProfileIK("SN_Kunai", "dz/anims/workspaces/player/player_main/weapons/player_main_1h_knife.asi", toolsOneHanded, 		"dz/anims/anm/player/ik/gear/kitchenknife.anm");
 			
+			GetDayZPlayerType().AddItemInHandsProfileIK("SN_Katana", "dz/anims/workspaces/player/player_main/weapons/player_main_1h_pipe.asi", toolsOneHanded,				"dz/anims/anm/player/ik/gear/Hatchet.anm"); 
+			
 			GetDayZPlayerType().AddItemInHandsProfileIK("SN_USBStick", "dz/anims/workspaces/player/player_main/player_main_1h.asi", toolsOneHanded, 						"dz/anims/anm/player/ik/gear/9v_battery.anm");
 			
 			GetDayZPlayerType().AddItemInHandsProfileIK("SN_SodaCan_ColorBase", "dz/anims/workspaces/player/player_main/props/player_main_1h_sodacan.asi", toolsOneHanded,	"dz/anims/anm/player/ik/gear/soda_can.anm");	

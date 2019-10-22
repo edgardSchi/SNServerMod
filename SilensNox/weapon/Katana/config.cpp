@@ -19,20 +19,30 @@ class CfgPatches
 class cfgVehicles
 {
 	class Clothing_Base;
-	class Sword;
+	class Inventory_Base;
 	class Clothing: Clothing_Base
 	{
 	};
-	class SN_KatanaSheath: Clothing
+	class SN_KatanaSheath_Hip: Clothing
 	{
 		scope=2;
 		displayName="Katana Scheide";
-		descriptionShort="$STR_cfgVehicles_TaloonBag_ColorBase1";
-		model="\SilensNox\weapon\Katana\KatanaSheath.p3d";
-		inventorySlot="Belt";
+		descriptionShort="HIPS";
+		model="\SilensNox\weapon\Katana\KatanaSheath_g.p3d";
+		inventorySlot="Hips";
+		ChangeInventorySlot[]=
+		{
+			"Hips"
+		};
+		ChangeIntoOnAttach[]=
+		{
+			"",
+			"SN_KatanaSheath_Back"
+		};
+		ChangeIntoOnDetach="M4A1";
 		attachments[]=
 		{
-			"SN_KatanaSlot"
+			"SNKatanaSlot"
 		};
 		itemInfo[]=
 		{
@@ -57,7 +67,7 @@ class cfgVehicles
 		};
 		class ClothingTypes
 		{
-			male="\SilensNox\weapon\Katana\KatanaSheath.p3d";
+			male="\SilensNox\weapon\Katana\KatanaSheath_m.p3d";
 			female="\SilensNox\weapon\Katana\KatanaSheath.p3d";
 		};
 		class DamageSystem
@@ -74,7 +84,7 @@ class cfgVehicles
 							1,
 							
 							{
-								"DZ\Characters\backpacks\data\taloon.rvmat"
+								"SilensNox\weapon\Katana\Data\Katana.rvmat"
 							}
 						},
 						
@@ -82,7 +92,7 @@ class cfgVehicles
 							0.69999999,
 							
 							{
-								"DZ\Characters\backpacks\data\taloon.rvmat"
+								"SilensNox\weapon\Katana\Data\Katana.rvmat"
 							}
 						},
 						
@@ -90,7 +100,7 @@ class cfgVehicles
 							0.5,
 							
 							{
-								"DZ\Characters\backpacks\data\taloon_damage.rvmat"
+								"SilensNox\weapon\Katana\Data\Katana_damage.rvmat"
 							}
 						},
 						
@@ -98,7 +108,7 @@ class cfgVehicles
 							0.30000001,
 							
 							{
-								"DZ\Characters\backpacks\data\taloon_damage.rvmat"
+								"SilensNox\weapon\Katana\Data\Katana_damage.rvmat"
 							}
 						},
 						
@@ -106,7 +116,7 @@ class cfgVehicles
 							0,
 							
 							{
-								"DZ\Characters\backpacks\data\taloon_destruct.rvmat"
+								"SilensNox\weapon\Katana\Data\Katana_destruct.rvmat"
 							}
 						}
 					};
@@ -135,7 +145,129 @@ class cfgVehicles
 			};
 		};
 	};
-	class SN_Katana: Sword
+	class SN_KatanaSheath_Back: Clothing
+	{
+		scope=2;
+		displayName="Katana Scheide";
+		descriptionShort="BACK";
+		model="\SilensNox\weapon\Katana\KatanaSheath_g.p3d";
+		inventorySlot="Back";
+		ChangeInventorySlot[]=
+		{
+			"Back"
+		};
+		ChangeIntoOnAttach[]=
+		{
+			"SN_KatanaSheath_Hip",
+			""
+		};
+		ChangeIntoOnDetach="SKS";
+		attachments[]=
+		{
+			"SNKatanaSlot"
+		};
+		itemInfo[]=
+		{
+			"Clothing",
+			"Back"
+		};
+		rotationFlags=16;
+		weight=1300;
+		itemSize[]={4,5};
+		itemsCargoSize[]={7,6};
+		absorbency=0.30000001;
+		heatIsolation=0.1;
+		repairableWithKits[]={5,3};
+		repairCosts[]={30,25};
+		soundAttType="Outdoor";
+		randomQuantity=3;
+		hiddenSelections[]=
+		{
+			"camoGround",
+			"camoMale",
+			"camoFemale"
+		};
+		class ClothingTypes
+		{
+			male="\SilensNox\weapon\Katana\KatanaSheath_m.p3d";
+			female="\SilensNox\weapon\Katana\KatanaSheath.p3d";
+		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"SilensNox\weapon\Katana\Data\Katana.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"SilensNox\weapon\Katana\Data\Katana.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"SilensNox\weapon\Katana\Data\Katana_damage.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"SilensNox\weapon\Katana\Data\Katana_damage.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"SilensNox\weapon\Katana\Data\Katana_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
+		class AnimEvents
+		{
+			class SoundWeapon
+			{
+				class pickUpItem_Light
+				{
+					soundSet="pickUpBackPack_Plastic_Light_SoundSet";
+					id=796;
+				};
+				class pickUpItem
+				{
+					soundSet="pickUpBackPack_Plastic_SoundSet";
+					id=797;
+				};
+				class drop
+				{
+					soundset="taloonbag_drop_SoundSet";
+					id=898;
+				};
+			};
+		};
+	};
+	class SN_Katana: Inventory_Base
 	{
 		scope=2;
 		displayName="Katana";
@@ -145,9 +277,7 @@ class cfgVehicles
 		repairCosts[]={30,25};
 		inventorySlot[]=
 		{
-			"Shoulder",
-			"Melee",
-			"SN_KatanaSlot"
+			"SNKatanaSlot"
 		};
 		RestrainUnlockType=1;
 		rotationFlags=12;
@@ -178,7 +308,7 @@ class cfgVehicles
 							1,
 							
 							{
-								"DZ\weapons\melee\blade\data\medieval_sword.rvmat"
+								"SilensNox\weapon\Katana\Data\Katana.rvmat"
 							}
 						},
 						
@@ -186,7 +316,7 @@ class cfgVehicles
 							0.69999999,
 							
 							{
-								"DZ\weapons\melee\blade\data\medieval_sword.rvmat"
+								"SilensNox\weapon\Katana\Data\Katana.rvmat"
 							}
 						},
 						
@@ -194,7 +324,7 @@ class cfgVehicles
 							0.5,
 							
 							{
-								"DZ\weapons\melee\blade\data\medieval_sword_damage.rvmat"
+								"SilensNox\weapon\Katana\Data\Katana_damage.rvmat"
 							}
 						},
 						
@@ -202,7 +332,7 @@ class cfgVehicles
 							0.30000001,
 							
 							{
-								"DZ\weapons\melee\blade\data\medieval_sword_damage.rvmat"
+								"SilensNox\weapon\Katana\Data\Katana_damage.rvmat"
 							}
 						},
 						
@@ -210,7 +340,7 @@ class cfgVehicles
 							0,
 							
 							{
-								"DZ\weapons\melee\blade\data\medieval_sword_destruct.rvmat"
+								"SilensNox\weapon\Katana\Data\Katana_destruct.rvmat"
 							}
 						}
 					};
