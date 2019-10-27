@@ -10,7 +10,7 @@ class CfgPatches
 			"DZ_Data",
 			"OP_BaseItems",
 			"MunghardsItems",
-			"DayZExpansionChat"
+			"DayZExpansionChat",
 			"Munghardshikingbag",
 			"cdub_sneaky_stashes"
 		};
