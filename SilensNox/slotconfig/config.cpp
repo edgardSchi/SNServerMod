@@ -131,6 +131,12 @@ class CfgSlots
 		displayName="SNKatanaSlot";
 		ghostIcon="knife";
 	};
+	class Slot_SNFilters
+	{
+		name="SNFilters";
+		displayName="SNFilters";
+		ghostIcon="knife";
+	};
 };
 
 class CfgNonAIVehicles

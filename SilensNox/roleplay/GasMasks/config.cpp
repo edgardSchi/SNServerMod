@@ -27,10 +27,10 @@ class CfgVehicles
 		};
 		class EnergyManager
 		{
-			hasIcon=0;
+			hasIcon=1;
 			autoSwitchOffWhenInCargo=1;
 			energyUsagePerSecond=1;
-			plugType=15;
+			plugType=1;
 			attachmentAction=1;
 			updateInterval=30;
 		};
@@ -43,7 +43,7 @@ class CfgVehicles
 		};
 		class EnergyManager
 		{
-			hasIcon=0;
+			hasIcon=1;
 			autoSwitchOffWhenInCargo=1;
 			energyUsagePerSecond=1;
 			plugType=1;
@@ -57,10 +57,15 @@ class CfgVehicles
 		displayName="";
 		descriptionShort="";
 		model="\DZ\characters\masks\GP5GasMask_filter.p3d";
+		quantityBar=1;
+		stackedUnit="w";
+		varQuantityInit=50;
+		varQuantityMin=0;
+		varQuantityMax=50;
+		varQuantityDestroyOnMin=0;
 		inventorySlot[]=
 		{
-		"SNFilters",
-		"SNFilters1"
+		"SNFilters"
 		};
 		rotationFlags=1;
 		weight=200;
@@ -145,8 +150,10 @@ class CfgVehicles
 	class SN_T1Filter: SN_GasMaskFilter_Base
 	{
 		scope=2;
-		displayName="";
+		displayName="T1Filter";
 		descriptionShort="";
+		varQuantityInit=60;
+		varQuantityMax=60;
 		hiddenSelections[]=
 		{
 			"camoGround"
@@ -208,12 +215,26 @@ class CfgVehicles
 				};
 			};
 		};
+		class EnergyManager
+		{
+			hasIcon=0;
+			switchOnAtSpawn=1;
+			isPassiveDevice=1;
+			energyStorageMax=60;
+			energyAtSpawn=60;
+			convertEnergyToQuantity=1;
+			reduceMaxEnergyByDamageCoef=1;
+			powerSocketsCount=1;
+			compatiblePlugTypes[]={1};
+		};
 	};	
 	class SN_T2Filter: SN_GasMaskFilter_Base
 	{
 		scope=2;
 		displayName="";
 		descriptionShort="";
+		varQuantityInit=7200;
+		varQuantityMax=7200;
 		hiddenSelections[]=
 		{
 			"camoGround"
@@ -222,6 +243,46 @@ class CfgVehicles
 		{
 			"\dz\characters\masks\data\GP5GasMask_white_co.paa"
 		};
+		class EnergyManager
+		{
+			hasIcon=0;
+			switchOnAtSpawn=1;
+			isPassiveDevice=1;
+			energyStorageMax=7200;
+			energyAtSpawn=7200;
+			convertEnergyToQuantity=1;
+			reduceMaxEnergyByDamageCoef=1;
+			powerSocketsCount=1;
+			compatiblePlugTypes[]={1};
+		};
 	};	
+	class SN_T3Filter: SN_GasMaskFilter_Base
+	{
+		scope=2;
+		displayName="";
+		descriptionShort="";
+		varQuantityInit=14400;
+		varQuantityMax=14400;
+		hiddenSelections[]=
+		{
+			"camoGround"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\dz\characters\masks\data\GP5GasMask_white_co.paa"
+		};
+		class EnergyManager
+		{
+			hasIcon=0;
+			switchOnAtSpawn=1;
+			isPassiveDevice=1;
+			energyStorageMax=14400;
+			energyAtSpawn=14400;
+			convertEnergyToQuantity=1;
+			reduceMaxEnergyByDamageCoef=1;
+			powerSocketsCount=1;
+			compatiblePlugTypes[]={1};
+		};
+	};
 };
     

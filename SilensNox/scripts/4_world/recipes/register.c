@@ -4,7 +4,6 @@ modded class PluginRecipesManager
 	{	super.RegisterRecipies();
 		RegisterRecipe(new Fishnetzu);
 		RegisterRecipe(new SmallFishnetzu);
-		RegisterRecipe(new Crafttzusplint);
 		RegisterRecipe(new CraftSpritze);
 		RegisterRecipe(new LightZigarette);
 		RegisterRecipe(new LightJoint);

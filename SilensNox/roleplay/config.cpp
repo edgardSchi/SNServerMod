@@ -110,7 +110,7 @@ class CfgVehicles
 	class SN_Waschmachine : SN_Roleplay_Base
 	{
 		scope=2;
-		displayName="Computer";
+		displayName="Waschmachine";
 		descriptionShort="Eine große Waschmachine";
 		model="DZ\structures\furniture\eletrical_appliances\washing_machine\washing_machine.p3d";
 		itemSize[]={10,10};
