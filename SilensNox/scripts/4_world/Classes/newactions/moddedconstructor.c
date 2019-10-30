@@ -7,5 +7,7 @@ modded class ActionConstructor
 		actions.Insert(ActionHealSelfSyringe);
 		actions.Insert(ActionHealOtherSyringe);
 		actions.Insert(ActionRauchen);
+		actions.Insert(ActionKatanaSheathHip);
+		actions.Insert(ActionKatanaSheathBack);
 	}
 }

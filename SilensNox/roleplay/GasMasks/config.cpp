@@ -85,7 +85,7 @@ class CfgVehicles
 		{
 			hasIcon=0;
 			switchOnAtSpawn=1;
-			isPassiveDevice=0;
+			isPassiveDevice=1;
 			energyStorageMax=50;
 			energyAtSpawn=50;
 			convertEnergyToQuantity=1;
@@ -219,7 +219,7 @@ class CfgVehicles
 		{
 			hasIcon=0;
 			switchOnAtSpawn=1;
-			isPassiveDevice=0;
+			isPassiveDevice=1;
 			energyStorageMax=60;
 			energyAtSpawn=60;
 			convertEnergyToQuantity=1;
