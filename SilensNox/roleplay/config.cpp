@@ -31,7 +31,7 @@ class CfgVehicles
 		physLayer="item_large";
 		heavyItem=1;
 		weight=10;
-	}		
+	};
 	class SN_Barrel_Base: CanisterGasoline
 	{
 		scope=0;
@@ -422,7 +422,7 @@ class CfgVehicles
 			"SNCIG19",
 			"mask"
 		};
-	}
+	};
 	class SN_CigarettePack_ColorBase: Inventory_Base
 	{
 		displayName="Zigarettenpackung";

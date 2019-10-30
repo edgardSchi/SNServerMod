@@ -8,7 +8,7 @@ PixelShaderID="Super";
 VertexShaderID="Super";
 class Stage1
 {
-	texture="LandOfAnonymous\roleplay\data\boom_no.paa";
+	texture="SilensNox\roleplay\Boombox\Data\boom_no.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -44,7 +44,7 @@ class Stage3
 };
 class Stage4
 {
-	texture="LandOfAnonymous\roleplay\data\boom_as.paa";
+	texture="SilensNox\roleplay\Boombox\Data\boom_as.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -80,7 +80,7 @@ class Stage6
 };
 class Stage7
 {
-	texture="LandOfAnonymous\roleplay\data\boom_co.paa";
+	texture="SilensNox\roleplay\Boombox\Data\boom_co.paa";
 	uvSource="tex";
 	class uvTransform
 	{

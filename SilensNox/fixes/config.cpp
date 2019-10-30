@@ -71,7 +71,7 @@ class CfgVehicles
 	class SeaChest: Container_Base
 	{
 		physLayer="item_large";
-	}
+	};
 	class SurvivorBase: Man
 	{
 		attachments[]=

@@ -33,11 +33,11 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"SilensNox\roleplay\Boombox\Boombox_co.paa"
+			"SilensNox\roleplay\Boombox\Data\boom_co.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"SilensNox\roleplay\Boombox\Boombox.rvmat"
+			"SilensNox\roleplay\Boombox\Data\Boombox.rvmat"
 		};
 		attachments[]=
 		{
@@ -69,7 +69,7 @@ class CfgVehicles
 							1,
 							
 							{
-								"SilensNox\roleplay\Boombox\Boombox.rvmat"
+								"SilensNox\roleplay\Boombox\Data\Boombox.rvmat"
 							}
 						},
 						
@@ -77,7 +77,7 @@ class CfgVehicles
 							0.69999999,
 							
 							{
-								"SilensNox\roleplay\Boombox\Boombox.rvmat"
+								"SilensNox\roleplay\Boombox\Data\Boombox.rvmat"
 							}
 						},
 						
@@ -85,7 +85,7 @@ class CfgVehicles
 							0.5,
 							
 							{
-								"SilensNox\roleplay\Boombox\Boombox_damage.rvmat"
+								"SilensNox\roleplay\Boombox\Data\Boombox_damage.rvmat"
 							}
 						},
 						
@@ -93,7 +93,7 @@ class CfgVehicles
 							0.30000001,
 							
 							{
-								"SilensNox\roleplay\Boombox\Boombox_damage.rvmat"
+								"SilensNox\roleplay\Boombox\Data\Boombox_damage.rvmat"
 							}
 						},
 						
@@ -101,7 +101,7 @@ class CfgVehicles
 							0,
 							
 							{
-								"SilensNox\roleplay\Boombox\Boombox_destruct.rvmat"
+								"SilensNox\roleplay\Boombox\Data\Boombox_destruct.rvmat"
 							}
 						}
 					};
