@@ -12,7 +12,8 @@ class CfgPatches
 			"MunghardsItems",
 			"DayZExpansionChat",
 			"Munghardshikingbag",
-			"cdub_sneaky_stashes"
+			"cdub_sneaky_stashes",
+			"MedicalAttentionScipts"
 		};
 	};
 };
@@ -26,7 +27,7 @@ class CfgMods
 		hideName=1;
 		hidePicture=1;
 		name="SilensNox";
-		credits="Land of Anonymus Team";
+		credits="Silens Nox Team";
 		author="Niphoria | Eddy";
 		authorID="0";
 		version="1.0";

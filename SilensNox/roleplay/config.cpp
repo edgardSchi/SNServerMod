@@ -756,7 +756,7 @@ class CfgVehicles
 			convertEnergyToQuantity = 1;
 		};
 	};
-	class HealSyringeEmpty: Inventory_Base
+	class SN_HealSyringeEmpty: Inventory_Base
 	{
 		scope=2;
 		displayName="Leere Spritze";
@@ -848,7 +848,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class Healsyringe: Inventory_Base
+	class SN_Healsyringe: Inventory_Base
 	{
 		scope=2;
 		displayName="Spritze mit Medizin";
