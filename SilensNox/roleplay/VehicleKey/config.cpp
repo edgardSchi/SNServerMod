@@ -19,7 +19,7 @@ class CfgVehicles
 	class Inventory_Base;
 	class SN_KeyBase: Inventory_Base
 	{
-		scope=2;
+		scope=0;
 		displayName="Debug Key";
 		descriptionShort="???????";
 		model="SilensNox\roleplay\VehicleKey\VehicleKey.p3d";
@@ -36,19 +36,146 @@ class CfgVehicles
 			"SilensNox\roleplay\VehicleKey\Data\VehicleKey.rvmat"
 		};
 	};
-	class SN_WolgaK1: SN_KeyBase
+	class SNWolgaK1: SN_KeyBase
 	{
 		scope=2;
-		displayName="Wolga Key 1";
-		descriptionShort="Testkey";
+		displayName="Schlüssel";
+		descriptionShort="EB21";
 		inventoryslot="SNWolgaK_1";
 	};
 	class SN_WolgaK2: SN_KeyBase
 	{
 		scope=2;
-		displayName="Wolga Key 1";
-		descriptionShort="Testkey";
+		displayName="Schlüssel";
+		descriptionShort="SAF6";
 		inventoryslot="SNWolgaK_2";
+	};
+	class SN_WolgaK3: SN_KeyBase
+	{
+		scope=2;
+		displayName="Schlüssel";
+		descriptionShort="NJA9";
+		inventoryslot="SNWolgaK_3";
+	};
+	class SN_WolgaK4: SN_KeyBase
+	{
+		scope=2;
+		displayName="Schlüssel";
+		descriptionShort="JFO9";
+		inventoryslot="SNWolgaK_4";
+	};
+	class SN_WolgaK5: SN_KeyBase
+	{
+		scope=2;
+		displayName="Schlüssel";
+		descriptionShort="3J2P";
+		inventoryslot="SNWolgaK_5";
+	};
+	class SN_WolgaK6: SN_KeyBase
+	{
+		scope=2;
+		displayName="Schlüssel";
+		descriptionShort="930E";
+		inventoryslot="SNWolgaK_6";
+	};
+	class SN_WolgaK7: SN_KeyBase
+	{
+		scope=2;
+		displayName="Schlüssel";
+		descriptionShort="LÖ6O";
+		inventoryslot="SNWolgaK_7";
+	};
+	class SN_WolgaK8: SN_KeyBase
+	{
+		scope=2;
+		displayName="Schlüssel";
+		descriptionShort="QSK8";
+		inventoryslot="SNWolgaK_8";
+	};
+	class SN_WolgaK9: SN_KeyBase
+	{
+		scope=2;
+		displayName="Schlüssel";
+		descriptionShort="BDHJ";
+		inventoryslot="SNWolgaK_9";
+	};
+	class SN_WolgaK10: SN_KeyBase
+	{
+		scope=2;
+		displayName="Schlüssel";
+		descriptionShort="OJI4";
+		inventoryslot="SNWolgaK_10";
+	};
+	
+	class SN_NivaK1: SN_KeyBase
+	{
+		scope=2;
+		displayName="Schlüssel";
+		descriptionShort="OJI4";
+		inventoryslot="SNNivaK_1";
+	};
+	class SN_NivaK2: SN_KeyBase
+	{
+		scope=2;
+		displayName="Schlüssel";
+		descriptionShort="OJI4";
+		inventoryslot="SNNivaK_1";
+	};
+	class SN_NivaK3: SN_KeyBase
+	{
+		scope=2;
+		displayName="Schlüssel";
+		descriptionShort="OJI4";
+		inventoryslot="SNNivaK_1";
+	};
+	class SN_NivaK4: SN_KeyBase
+	{
+		scope=2;
+		displayName="Schlüssel";
+		descriptionShort="OJI4";
+		inventoryslot="SNNivaK_1";
+	};
+	class SN_NivaK5: SN_KeyBase
+	{
+		scope=2;
+		displayName="Schlüssel";
+		descriptionShort="OJI4";
+		inventoryslot="SNNivaK_1";
+	};
+	class SN_NivaK6: SN_KeyBase
+	{
+		scope=2;
+		displayName="Schlüssel";
+		descriptionShort="OJI4";
+		inventoryslot="SNNivaK_1";
+	};
+	class SN_NivaK7: SN_KeyBase
+	{
+		scope=2;
+		displayName="Schlüssel";
+		descriptionShort="OJI4";
+		inventoryslot="SNNivaK_1";
+	};
+	class SN_NivaK8: SN_KeyBase
+	{
+		scope=2;
+		displayName="Schlüssel";
+		descriptionShort="OJI4";
+		inventoryslot="SNNivaK_1";
+	};
+	class SN_NivaK9: SN_KeyBase
+	{
+		scope=2;
+		displayName="Schlüssel";
+		descriptionShort="OJI4";
+		inventoryslot="SNNivaK_1";
+	};
+	class SN_NivaK10: SN_KeyBase
+	{
+		scope=2;
+		displayName="Schlüssel";
+		descriptionShort="OJI4";
+		inventoryslot="SNNivaK_1";
 	};
 	
 	

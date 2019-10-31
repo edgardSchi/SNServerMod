@@ -152,8 +152,8 @@ class CfgVehicles
 		scope=2;
 		displayName="Gasmaskenfilter";
 		descriptionShort="Ein Gasmaskenfilter!";
-		varQuantityInit=60;
-		varQuantityMax=60;
+		varQuantityInit=14400;
+		varQuantityMax=14400;
 		hiddenSelections[]=
 		{
 			"camoGround"
@@ -220,8 +220,8 @@ class CfgVehicles
 			hasIcon=0;
 			switchOnAtSpawn=1;
 			isPassiveDevice=1;
-			energyStorageMax=60;
-			energyAtSpawn=60;
+			energyStorageMax=14400;
+			energyAtSpawn=14400;
 			convertEnergyToQuantity=1;
 			reduceMaxEnergyByDamageCoef=1;
 			powerSocketsCount=1;
