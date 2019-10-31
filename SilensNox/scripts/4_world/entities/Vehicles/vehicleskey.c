@@ -1,6 +1,25 @@
 // This is modded by Niphoria 
 modded class CarScript
 {
+
+	autoptr TStringArray keys = new TStringArray;
+
+
+	void InitKeys() {
+		keys.Insert("SNWolgaK_1");
+		keys.Insert("SNWolgaK_2");
+		keys.Insert("SNWolgaK_3");
+		keys.Insert("SNWolgaK_4");
+
+		//etc.
+	}
+
+	void CarScript() {
+		//super.CarScript();
+
+		InitKeys();
+	}
+
 	override void EEItemDetached(EntityAI item, string slot_name)
 	{
 		if ( GetGame().IsServer() )
@@ -17,8 +36,15 @@ modded class CarScript
 			if ( EngineIsOn() )
 			{
 				//EngineBelt
-				if ( slot_name == "GlowPlug" || slot_name == "SparkPlug" || slot_name == "CarBattery" || slot_name == "TruckBattery" || slot_name == "SNWolgaK_1" || slot_name == "SNWolgaK_2" || slot_name == "SNWolgaK_3" || slot_name == "SNWolgaK_4" || slot_name == "SNWolgaK_5" || slot_name == "SNWolgaK_6" || slot_name == "SNWolgaK_7" || slot_name == "SNWolgaK_8" || slot_name == "SNWolgaK_9" || slot_name == "SNWolgaK_10" || slot_name == "SNNivaK_1" || slot_name == "SNNivaK_2" || slot_name == "SNNivaK_3" || slot_name == "SNNivaK_4" || slot_name == "SNNivaK_5" || slot_name == "SNNivaK_6" || slot_name == "SNNivaK_7" || slot_name == "SNNivaK_8" || slot_name == "SNNivaK_9" || slot_name == "SNNivaK_10" || slot_name == "SNSkoda120K_1" || slot_name == "SNSkoda120K_2" || slot_name == "SNSkoda120K_3" || slot_name == "SNSkoda120K_4" || slot_name == "SNSkoda120K_5" || slot_name == "SNSkoda120K_6" || slot_name == "SNSkoda120K_7" || slot_name == "SNSkoda120K_8" || slot_name == "SNSkoda120K_9" || slot_name == "SNSkoda120K_10" || slot_name == "SNZil130K_1" || slot_name == "SNZil130K_2" || slot_name == "SNZil130K_3" || slot_name == "SNZil130K_4" || slot_name == "SNZil130K_5" || slot_name == "SNZil130K_6" || slot_name == "SNZil130K_7" || slot_name == "SNZil130K_8" || slot_name == "SNZil130K_9" || slot_name == "SNZil130K_10" )
+				if ( slot_name == "GlowPlug" || slot_name == "SparkPlug" || slot_name == "CarBattery" || slot_name == "TruckBattery")
 					EngineStop();
+			}
+
+			//check if key was removed
+			foreach(string key : keys) {
+				if(slot_name == key) {
+					EngineStop();
+				}
 			}
 			
 			if ( slot_name == "CarBattery" )
@@ -62,8 +88,17 @@ modded class CarScript
 			CheckVitalItem( IsVitalTruckBattery(), "TruckBattery" );
 			CheckVitalItem( IsVitalSparkPlug(), "SparkPlug" );
 			CheckVitalItem( IsVitalGlowPlug(), "GlowPlug" );
-			// Wolga
 			
+			//check if keys is not ruined and in the slot
+			foreach(string key : keys) {
+				CheckVitalItem(true, key);
+			}
+
+
+			//brauchst du nicht
+
+			// Wolga
+			/*
 			CheckVitalItem( IsVitalKeyWolga1(), "SNWolgaK_1" );
 			CheckVitalItem( IsVitalKeyWolga2(), "SNWolgaK_2" );
 			CheckVitalItem( IsVitalKeyWolga3(), "SNWolgaK_3" );
@@ -122,11 +157,13 @@ modded class CarScript
 			CheckVitalItem( IsVitalKeyZil8(), "SNZil130K_8" );
 			CheckVitalItem( IsVitalKeyZil9(), "SNZil130K_9" );
 			CheckVitalItem( IsVitalKeyZil10(), "SNZil130K_10" );
-			
+			*/
+
 			// engine belt is not needed right now
 			//CheckVitalItem( IsVitalEngineBelt(), "EngineBelt" );
 		}
 	}
+	/*
 	bool IsVitalKeyZil1()
 	{
 		return false
@@ -331,6 +368,6 @@ modded class CarScript
 	{
 		return false;
 	}
-	
+	*/
 	
 }
