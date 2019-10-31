@@ -36,35 +36,35 @@ class CfgVehicles
 			"SilensNox\roleplay\VehicleKey\Data\VehicleKey.rvmat"
 		};
 	};
-	class SNWolgaK1: SN_KeyBase
+	class SNWolgaK_1: SN_KeyBase
 	{
 		scope=2;
 		displayName="Schlüssel";
 		descriptionShort="EB21";
 		inventoryslot="SNWolgaK_1";
 	};
-	class SN_WolgaK2: SN_KeyBase
+	class SNWolgaK_2: SN_KeyBase
 	{
 		scope=2;
 		displayName="Schlüssel";
 		descriptionShort="SAF6";
 		inventoryslot="SNWolgaK_2";
 	};
-	class SN_WolgaK3: SN_KeyBase
+	class SNWolgaK_3: SN_KeyBase
 	{
 		scope=2;
 		displayName="Schlüssel";
 		descriptionShort="NJA9";
 		inventoryslot="SNWolgaK_3";
 	};
-	class SN_WolgaK4: SN_KeyBase
+	class SNWolgaK_4: SN_KeyBase
 	{
 		scope=2;
 		displayName="Schlüssel";
 		descriptionShort="JFO9";
 		inventoryslot="SNWolgaK_4";
 	};
-	class SN_WolgaK5: SN_KeyBase
+	class SNWolgaK_5: SN_KeyBase
 	{
 		scope=2;
 		displayName="Schlüssel";
