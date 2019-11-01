@@ -23,6 +23,8 @@ modded class PlayerBase
 			DayzPlayerItemBehaviorCfg     toolsOneHanded = new DayzPlayerItemBehaviorCfg;
 			toolsOneHanded.SetToolsOneHanded();
 			
+			GetDayZPlayerType().AddItemInHandsProfileIK("SN_IDCard", "dz/anims/workspaces/player/player_main/player_main_1h.asi", toolsOneHanded, 							"dz/anims/anm/player/ik/gear/paper.anm");
+			
 			
 			GetDayZPlayerType().AddItemInHandsProfileIK("SN_Kunai", "dz/anims/workspaces/player/player_main/weapons/player_main_1h_knife.asi", toolsOneHanded, 		"dz/anims/anm/player/ik/gear/kitchenknife.anm");
 			
@@ -32,8 +34,8 @@ modded class PlayerBase
 			
 			GetDayZPlayerType().AddItemInHandsProfileIK("SN_SodaCan_ColorBase", "dz/anims/workspaces/player/player_main/props/player_main_1h_sodacan.asi", toolsOneHanded,	"dz/anims/anm/player/ik/gear/soda_can.anm");	
 			
-			GetDayZPlayerType().AddItemInHandsProfileIK("Healsyringe", "dz/anims/workspaces/player/player_main/props/player_main_1h_syringe.asi", toolsOneHanded,						"dz/anims/anm/player/ik/gear/Syringe_Full.anm");
-			GetDayZPlayerType().AddItemInHandsProfileIK("HealSyringeEmpty", "dz/anims/workspaces/player/player_main/props/player_main_1h_syringe.asi", toolsOneHanded,						"dz/anims/anm/player/ik/gear/Syringe_Full.anm");
+			GetDayZPlayerType().AddItemInHandsProfileIK("SN_Healsyringe", "dz/anims/workspaces/player/player_main/props/player_main_1h_syringe.asi", toolsOneHanded,						"dz/anims/anm/player/ik/gear/Syringe_Full.anm");
+			GetDayZPlayerType().AddItemInHandsProfileIK("SN_HealSyringeEmpty", "dz/anims/workspaces/player/player_main/props/player_main_1h_syringe.asi", toolsOneHanded,						"dz/anims/anm/player/ik/gear/Syringe_Full.anm");
 			
 			GetDayZPlayerType().AddItemInHandsProfileIK("SN_cigar_mung_lit", "dz/anims/workspaces/player/player_main/player_main_1h.asi", toolsOneHanded, "dz/anims/anm/player/ik/gear/thermometer.anm");
 			GetDayZPlayerType().AddItemInHandsProfileIK("SN_joint_mung_lit", "dz/anims/workspaces/player/player_main/player_main_1h.asi", toolsOneHanded, "dz/anims/anm/player/ik/gear/thermometer.anm");
