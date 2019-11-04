@@ -47,6 +47,67 @@ class CfgVehicles
 	class AnimalBase;
 	class dec_base;
 	class Man;
+	class PlantBase;
+	class Plant_Tomato: PlantBase
+	{
+		scope=2;
+		class Horticulture
+		{
+			GrowthStagesCount=6;
+			CropsCount=3;
+			CropsType="Tomato";
+		};
+	};
+	class Plant_Pepper: PlantBase
+	{
+		scope=2;
+		class Horticulture
+		{
+			GrowthStagesCount=6;
+			CropsCount=2;
+			CropsType="GreenBellPepper";
+		};
+	};
+	class Plant_Potato: PlantBase
+	{
+		scope=2;
+		class Horticulture
+		{
+			GrowthStagesCount=6;
+			CropsCount=2;
+			CropsType="Potato";
+		};
+	};
+	class Plant_Pumpkin: PlantBase
+	{
+		scope=2;
+		class Horticulture
+		{
+			GrowthStagesCount=7;
+			CropsCount=1;
+			CropsType="Pumpkin";
+		};
+	};
+	class Plant_Zucchini: PlantBase
+	{
+		scope=2;
+		class Horticulture
+		{
+			GrowthStagesCount=7;
+			CropsCount=1;
+			CropsType="Zucchini";
+		};
+	};
+	class Plant_Cannabis: PlantBase
+	{
+		scope=2;
+		class Horticulture
+		{
+			GrowthStagesCount=6;
+			CropsCount=2;
+			CropsType="Cannabis";
+		};
+	};
 	class Barrel_ColorBase: Container_Base
 	{
 		attachments[]=
