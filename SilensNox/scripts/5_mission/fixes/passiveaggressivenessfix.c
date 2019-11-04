@@ -1,5 +1,5 @@
-const string SN_IP = "176.57.168.220";
-const int PORT = 2602;
+const string SN_IP = "213.202.212.136";
+const int PORT = 2302;
 
 modded class MainMenu
 {

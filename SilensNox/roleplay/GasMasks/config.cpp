@@ -11,7 +11,8 @@ class CfgPatches
         requiredAddons[]=
         {
             "DZ_Data",
-			"DZ_Characters_Masks"
+			"DZ_Characters_Masks",
+			"PMK_5A_Gas_Mask"
         };
     };
 };
@@ -36,6 +37,22 @@ class CfgVehicles
 		};
 	};
 	class GP5GasMask: Clothing
+	{
+		attachments[]=
+		{
+			"SNFilters"
+		};
+		class EnergyManager
+		{
+			hasIcon=1;
+			autoSwitchOffWhenInCargo=1;
+			energyUsagePerSecond=1;
+			plugType=1;
+			attachmentAction=1;
+			updateInterval=1;
+		};
+	};
+	class PMK_5A_Gas_Mask: Clothing
 	{
 		attachments[]=
 		{
@@ -86,8 +103,8 @@ class CfgVehicles
 			hasIcon=0;
 			switchOnAtSpawn=1;
 			isPassiveDevice=1;
-			energyStorageMax=50;
-			energyAtSpawn=50;
+			energyStorageMax=14400;
+			energyAtSpawn=14400;
 			convertEnergyToQuantity=1;
 			reduceMaxEnergyByDamageCoef=1;
 			powerSocketsCount=1;

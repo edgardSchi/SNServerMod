@@ -54,17 +54,17 @@ modded class PlayerConstants
 	static const float LOW_ENERGY_THRESHOLD 					= 200;	//threshold from which energy affects health
 
 	//--------------------------------------------------------
-	static const float METABOLIC_SPEED_ENERGY_BASAL		= 0.01;		//energy loss per second while idle
+	static const float METABOLIC_SPEED_ENERGY_BASAL		= 0.001;		//energy loss per second while idle
 	
-	static const float METABOLIC_SPEED_ENERGY_WALK		= 0.075; 		//energy loss per second
-	static const float METABOLIC_SPEED_ENERGY_JOG		= 0.2; 	//energy loss per second
-	static const float METABOLIC_SPEED_ENERGY_SPRINT	= 0.4; 		//energy loss per second
+	static const float METABOLIC_SPEED_ENERGY_WALK		= 0.035; 		//energy loss per second
+	static const float METABOLIC_SPEED_ENERGY_JOG		= 0.070; 	//energy loss per second
+	static const float METABOLIC_SPEED_ENERGY_SPRINT	= 0.200; 		//energy loss per second
 	
-	static const float METABOLIC_SPEED_WATER_BASAL		= 0.02; 	//water loss per second while idle
+	static const float METABOLIC_SPEED_WATER_BASAL		= 0.002; 	//water loss per second while idle
 	
-	static const float METABOLIC_SPEED_WATER_WALK		= 0.1; 		//water loss per second
-	static const float METABOLIC_SPEED_WATER_JOG		= 0.35; 		//water loss per second
-	static const float METABOLIC_SPEED_WATER_SPRINT		= 0.8; 		//water loss per second
+	static const float METABOLIC_SPEED_WATER_WALK		= 0.045; 		//water loss per second
+	static const float METABOLIC_SPEED_WATER_JOG		= 0.100; 		//water loss per second
+	static const float METABOLIC_SPEED_WATER_SPRINT		= 0.400; 		//water loss per second
 	//--------------------------------------------------------
 	
 	static const float	THRESHOLD_HEAT_COMFORT_PLUS_WARNING		= 0.2;	//missing comment
@@ -102,16 +102,16 @@ modded class PlayerConstants
 	static const float ENERGY_LOSS_THRESHOLD_HC_MINUS_HIGH	= THRESHOLD_HEAT_COMFORT_MINUS_CRITICAL;
 	
 	static const float WATER_LOSS_HC_PLUS_LOW				= 0;
-	static const float WATER_LOSS_HC_PLUS_HIGH				= 0.4;
+	static const float WATER_LOSS_HC_PLUS_HIGH				= 0.15;
 
 	static const float ENERGY_LOSS_HC_MINUS_LOW				= 0;
-	static const float ENERGY_LOSS_HC_MINUS_HIGH			= 0.3;
+	static const float ENERGY_LOSS_HC_MINUS_HIGH			= 0.25;
 	
-	static const float HEALTH_LOSS_HC_PLUS_LOW				= 0.005;
-	static const float HEALTH_LOSS_HC_PLUS_HIGH				= 0.015;		
+	static const float HEALTH_LOSS_HC_PLUS_LOW				= 0.001;
+	static const float HEALTH_LOSS_HC_PLUS_HIGH				= 0.01;		
 	
-	static const float HEALTH_LOSS_HC_MINUS_LOW				= 0.005;
-	static const float HEALTH_LOSS_HC_MINUS_HIGH 			= 0.015;	
+	static const float HEALTH_LOSS_HC_MINUS_LOW				= 0.001;
+	static const float HEALTH_LOSS_HC_MINUS_HIGH 			= 0.01;		
 	
 	static const float WATER_LOSS_FEVER						= 0.2;
 	
@@ -120,7 +120,7 @@ modded class PlayerConstants
 	static const float LOW_WATER_DAMAGE_PER_SEC				= 0.02;		//health loss per second while low on water
 	
 	static const float HEALTH_REGEN_MIN						= 0.0005;	//health regen rate at BLOOD_THRESHOLD_FATAL blood level
-	static const float HEALTH_REGEN_MAX						= 0.0035;		//health regen rate at MAXIMUM blood level
+	static const float HEALTH_REGEN_MAX						= 0.001;		//health regen rate at MAXIMUM blood level
 	
 	static const float UNCONSCIOUS_THRESHOLD				= 25.0;		//player goes unconscious when we get under this threshold
 	static const float CONSCIOUS_THRESHOLD					= 70.0;		//player regains consciousness when he gets above this threshold

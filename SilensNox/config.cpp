@@ -13,7 +13,8 @@ class CfgPatches
 			"DayZExpansionChat",
 			"Munghardshikingbag",
 			"cdub_sneaky_stashes",
-			"MedicalAttentionScipts"
+			"MedicalAttentionScipts",
+			"Windstrideclothing"
 		};
 	};
 };

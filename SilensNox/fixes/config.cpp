@@ -302,7 +302,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class SodaCan_Pipsi: SN_SodaCan_ColorBase
+	class SN_SodaCan_Pipsi: SN_SodaCan_ColorBase
 	{
 		scope=2;
 		displayName="$STR_CfgVehicles_SodaCan_Pipsi0";
@@ -343,7 +343,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class SodaCan_Cola: SN_SodaCan_ColorBase
+	class SN_SodaCan_Cola: SN_SodaCan_ColorBase
 	{
 		scope=2;
 		displayName="$STR_CfgVehicles_SodaCan_Cola0";
@@ -384,7 +384,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class SodaCan_Spite: SN_SodaCan_ColorBase
+	class SN_SodaCan_Spite: SN_SodaCan_ColorBase
 	{
 		scope=2;
 		displayName="$STR_CfgVehicles_SodaCan_Spite0";
@@ -425,7 +425,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class SodaCan_Kvass: SN_SodaCan_ColorBase
+	class SN_SodaCan_Kvass: SN_SodaCan_ColorBase
 	{
 		scope=2;
 		displayName="$STR_CfgVehicles_SodaCan_Kvass0";

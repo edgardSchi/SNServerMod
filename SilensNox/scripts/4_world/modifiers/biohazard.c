@@ -53,7 +53,7 @@ modded class BiohazzardMdfr {
         EntityAI attachment;
         Class.CastTo(attachment, player.GetInventory().FindAttachment(InventorySlots.MASK))
 
-        if(attachment && (attachment.GetType() == "GasMask" || attachment.GetType() == "GP5GasMask")) {
+        if(attachment && (attachment.GetType() == "GasMask" || attachment.GetType() == "GP5GasMask" || attachment.GetType() == "mag3_gasmask_mung" || attachment.GetType() == "PMK_5A_Gas_Mask" || attachment.GetType() == "stalker_gasmask_white_mung" || attachment.GetType() == "stalker_gasmask_black_mung")) {
             return true;
         }
 
@@ -64,7 +64,7 @@ modded class BiohazzardMdfr {
         EntityAI attachment;
         Class.CastTo(attachment, player.GetInventory().FindAttachment(InventorySlots.MASK))
 
-        if(attachment && (attachment.GetType() == "GasMask" || attachment.GetType() == "GP5GasMask")) {
+        if(attachment && (attachment.GetType() == "GasMask" || attachment.GetType() == "GP5GasMask" || attachment.GetType() == "mag3_gasmask_mung" || attachment.GetType() == "PMK_5A_Gas_Mask" || attachment.GetType() == "stalker_gasmask_white_mung" || attachment.GetType() == "stalker_gasmask_black_mung")) {
             EntityAI filter = attachment.GetInventory().GetAttachmentFromIndex(0);
 
             if(filter && filter.GetCompEM().GetEnergy() > 0) {

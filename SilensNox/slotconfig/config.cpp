@@ -135,7 +135,7 @@ class CfgSlots
 	{
 		name="SNFilters";
 		displayName="SNFilters";
-		ghostIcon="barbedwiredown";
+		ghostIcon="missing";
 	};
 	
 	// Vehicle Keys
