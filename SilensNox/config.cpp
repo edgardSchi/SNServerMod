@@ -14,7 +14,10 @@ class CfgPatches
 			"Munghardshikingbag",
 			"cdub_sneaky_stashes",
 			"MedicalAttentionScipts",
-			"Windstrideclothing"
+			"Windstrideclothing",
+			"Gerph_Zil130",
+			"CrSk_VAZ_2107",
+			"CrSk_BMW_525i_E34"
 		};
 	};
 };

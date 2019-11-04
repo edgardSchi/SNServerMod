@@ -26,7 +26,6 @@ class CfgPatches
 			"DZ_Gear_Tools",
 			"OP_Lock",
 			"DZ_Gear_Crafting",
-			"Gerph_Zil130",
 			"cdub_sneaky_stashes",
 			"DZ_Gear_Camping",
 			"DZ_Gear_Containers",
