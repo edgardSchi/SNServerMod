@@ -169,8 +169,9 @@ class CfgVehicles
 		scope=2;
 		displayName="Gasmaskenfilter";
 		descriptionShort="Ein Gasmaskenfilter!";
-		varQuantityInit=14400;
-		varQuantityMax=14400;
+		varQuantityInit=50;
+		varQuantityMax=50;
+		weight=200;
 		hiddenSelections[]=
 		{
 			"camoGround"
