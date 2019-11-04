@@ -14,6 +14,9 @@ const int ID_EMOTE_RUINED			= 75;
 
 const int ID_EMOTE_BLOODYHANDS		= 76;
 
+//Menu constants
+const int MENU_CARD = 50;
+
 
 /*enum SNPlayerConstants
 {

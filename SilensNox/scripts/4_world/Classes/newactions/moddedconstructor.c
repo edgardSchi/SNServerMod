@@ -9,5 +9,7 @@ modded class ActionConstructor
 		actions.Insert(ActionRauchen);
 		actions.Insert(ActionKatanaSheathHip);
 		actions.Insert(ActionKatanaSheathBack);
+
+		actions.Insert(ActionLookAtCard);
 	}
 }
