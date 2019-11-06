@@ -32,7 +32,17 @@ class CfgPatches
 			"Munghardscsmcmillan",
 			"Munghardsdiana_m27",
 			"Munghardslebedev",
-			"DZ_Vehicles_Wheeled"
+			"DZ_Vehicles_Wheeled",
+			"Misho_VityazSN",
+			"MoreGuns_StechkinAPS",
+			"scar",
+			"MoreGuns_MP7",
+			"MoreGuns_Mk22",
+			"MoreGuns_M16",
+			"MoreGuns_M14",
+			"MoreGuns_M1A",
+			"MoreGuns_Kar98",
+			"MoreGuns_AWM"
         };
     };
 };
@@ -82,7 +92,149 @@ class cfgWeapons
 	class csmcmillan_Base;
 	class diana_m27_Base;
 	class Munghardsnagant;
+	class Vityaz_Base;
+	class StechkinAPS_Base;
+	class Scar_Base;
+	class MP7_Base;
+	class Mk22_Base;
+	class M16_Base;
+	class M14_Base;
+	class Kar98Real_Base;
+	class AWMreal_Base;
+	class MassType81_Base;
+	class MassMP153_Base;
+	class M1A_Base;
 	//ENDRQ
+	class MassMP153: MassMP153_Base
+	{
+		scope = 2;
+		displayName = "";
+		descriptionShort = "";
+	};
+	class MassMP153Short: MassMP153_Base
+	{
+		scope = 2;
+		displayName = "";
+		descriptionShort = "";
+	};
+	class MassType81: MassType81_Base
+	{
+		scope = 2;
+		displayName = "";
+		descriptionShort = "$";
+	};
+	class AWMreal: AWMreal_Base
+	{
+		scope=2;
+		displayName="";
+		descriptionShort="";
+	};
+	class Kar98Real: Kar98Real_Base
+	{
+		scope=2;
+		displayName="";
+		descriptionShort="";
+	};
+	class M1A: M1A_Base
+	{
+		scope=2;
+		displayName="";
+		descriptionShort="";
+	};
+	class M1A_Tan: M1A
+	{
+		displayName="";
+	};
+	class M1A_Green: M1A
+	{
+		displayName="";
+	};
+	class M14: M14_Base
+	{
+		scope=2;
+		displayName="";
+		descriptionShort="";
+	};
+	class M16: M16_Base
+	{
+		scope=2;
+		displayName="";
+		descriptionShort="";
+	};
+	class Mk22: Mk22_Base
+	{
+		scope=2;
+		displayName="";
+		descriptionShort="";
+	};
+	class SCAR: Scar_Base
+	{
+		scope=2;
+		displayName="";
+		descriptionShort="";
+	};
+	class Scar_Artic: SCAR
+	{
+		scope=2;
+		displayName="";
+	};
+	class Scar_Desert: SCAR
+	{
+		scope=2;
+		displayName="";
+	};
+	class Scar_Desert2: SCAR
+	{
+		scope=2;
+		displayName="";
+	};
+	class Scar_Tanbrown: SCAR
+	{
+		scope=2;
+		displayName="";
+	};
+	class Scar_Woodland: SCAR
+	{
+		scope=2;
+		displayName="";
+	};
+	class MP7: MP7_Base
+	{
+		scope=2;
+		displayName="";
+		descriptionShort="";
+	};
+	class StechkinAPS: StechkinAPS_Base
+	{
+		scope=2;
+		displayName="";
+		descriptionShort="";
+	};
+	class VityazSN: Vityaz_Base
+	{
+		scope=2;
+		displayName="";
+		descriptionShort="";
+	};
+	class VityazSN_TTSKO: VityazSN
+	{
+		scope=2;
+		displayName="";
+		descriptionShort="";
+	};
+	class VityazSN_UCP: VityazSN
+	{
+		scope=2;
+		displayName="";
+		descriptionShort="";
+	};
+	class VityazSN_Baroness: VityazSN
+	{
+		scope=2;
+		displayName="";
+		descriptionShort="";
+	};
+	
 	class AK74: AK74_Base
 	{
 		scope=2;
@@ -107,7 +259,7 @@ class cfgWeapons
 		displayName="";
 		descriptionShort="";
 	};
-	class AKMFroschi: AKM_Base
+	class AKMFroschi: AKM
 	{
 		scope=2;
 		displayName="AKM-4 mit Buttstock und Pumpenpleuelstange";
@@ -291,7 +443,7 @@ class cfgWeapons
 	class MassStevens301: Stevens_Base
 	{
 		scope=2;
-		displayName="Savage Stevens 301";
+		displayName="";
 		descriptionShort="'Mass' Model and Textures by the incredible 'omgitstallin' ";
 	};
 	class MassStevens301SuperShort: MassStevens301
@@ -305,13 +457,13 @@ class cfgWeapons
 	class MassKivaari: gevar_base
 	{
 		scope=2;
-		displayName="Kivaari .338";
+		displayName="";
 		descriptionShort="'Mass'";
 	};
 	class MassSVT40: MassSVT40_Base
 	{
 		scope=2;
-		displayName="SVT-40";
+		displayName="";
 		descriptionShort="Model provided by MyloTheAverageSniper,Animation work by Niphoria 'Mass'";
 	};
 	class MassSVT40_Black: MassSVT40

@@ -29,7 +29,8 @@ class CfgPatches
 			"cdub_sneaky_stashes",
 			"DZ_Gear_Camping",
 			"DZ_Gear_Containers",
-			"DZ_Characters"
+			"DZ_Characters",
+			"TheRanch_Vest"
         };
     };
 };
@@ -48,6 +49,62 @@ class CfgVehicles
 	class dec_base;
 	class Man;
 	class PlantBase;
+	class PlateCarrierVest;
+	class Tripod;
+	class MetalPlate: Inventory_Base
+	{
+		varStackMax=20;
+	};
+	class WoodenPlank: Inventory_Base
+	{
+		varStackMax=20;
+	};
+	class Firewood: Inventory_Base
+	{
+		varStackMax=6;
+	};
+	class Iceaxe: Inventory_Base
+	{
+		scope=2;
+		inventorySlot[]=
+		{
+			"Shoulder",
+			"Melee"
+		};
+	};
+	class Broom: Inventory_Base
+	{
+		scope=2;
+		inventorySlot[]=
+		{
+			"Shoulder",
+			"Melee"
+		};
+	};
+	class Paddle: Inventory_Base
+	{
+		scope=2;
+		inventorySlot[]=
+		{
+			"Shoulder",
+			"Melee"
+		};
+	};
+	class SN_Tripod: Tripod
+	{
+		scope=2;
+		inventorySlot[]=
+		{
+			"Shoulder",
+			"Melee",
+			"CookingTripod"
+		};
+	};
+	class OldGunBelt: PlateCarrierVest
+	{
+		scope=2;
+		weight=500;
+	};
 	class Plant_Tomato: PlantBase
 	{
 		scope=2;
@@ -558,10 +615,15 @@ class CfgVehicles
 		repairableWithKits[]={5,4};
 		repairCosts[]={30,25};
 	};
+	class WaterBottle: Bottle_Base
+	{
+		inventorySlot="Belt_Left";
+	};
 	class Vodka: Bottle_Base
 	{
 		varQuantityInit=1000;
 		varQuantityMax=1000;
+		inventorySlot="Belt_Left";
 	};
 	class DisinfectantAlcoholBase: Bottle_Base
 	{
