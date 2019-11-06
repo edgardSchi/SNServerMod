@@ -1,5 +1,16 @@
 modded class MissionGameplay {
 
+    ref CardMenu m_CardMenu;
+
+    private ref CardMenu GetCardMenu() {
+		if ( !m_CardMenu ) {
+            m_CardMenu.Init();
+			m_CardMenu = new ref CardMenu;
+		}
+
+		return m_CardMenu;
+	}
+
     override void OnUpdate(float timeslice) {
         super.OnUpdate(timeslice);
 
@@ -9,7 +20,7 @@ modded class MissionGameplay {
 		PlayerBase playerPB = PlayerBase.Cast(player);
         if(playerPB.enterIDCardMenu) {
             playerPB.enterIDCardMenu = false;
-            card_menu = CardMenu.Cast(GetUIManager().EnterScriptedMenu(MENU_CARD, menu));
+            GetGame().GetUIManager().ShowScriptedMenu(GetCardMenu(), NULL);
         }
         
     }

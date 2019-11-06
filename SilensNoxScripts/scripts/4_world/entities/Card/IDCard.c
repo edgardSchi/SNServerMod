@@ -1,4 +1,13 @@
-class SN_IDCard extends ItemCard {
+//Class for unique ID cards by Eddy
+class SN_IDCard extends ItemBase {
+
+    protected string m_Playername = "";
+    protected string m_RPID = "";
+
+    void SN_IDCard() {
+        //RegisterNetSyncVariableString("m_Playername");
+        //RegisterNetSyncVariableString("m_RPID");
+    }
 
     override void SetActions() {
         super.SetActions();
@@ -9,6 +18,8 @@ class SN_IDCard extends ItemCard {
     override void EOnInit(IEntity other, int extra) {
         m_Playername = GetGame().GetPlayer().GetIdentity().GetName();
         m_RPID = "Test ID";
+
+        SetSynchDirty();
 
         PrintMessageToPlayer("Playername: " + m_Playername);
         PrintMessageToPlayer("ID: " + m_RPID);
@@ -25,7 +36,10 @@ class SN_IDCard extends ItemCard {
     override bool OnStoreLoad(ParamsReadContext ctx, int version) {
         super.OnStoreLoad(ctx, version);
 
-        if( !ctx.Read( m_Playername) ) {
+        string playername;
+        if( ctx.Read( playername ) ) {
+            m_Playername = playername;
+        } else {
             m_Playername = "Undifined name";
             return false;
         }
@@ -64,6 +78,14 @@ class SN_IDCard extends ItemCard {
     	    GetGame().GetMission().OnEvent( ChatMessageEventTypeID, new ChatMessageEventParams( CCDirect, "", txt, "" ) );
 	    }
 		
+	}
+
+    string GetPlayername() {
+		return m_Playername;
+	}
+
+	string GetRPID() {
+		return m_RPID;
 	}
 
 }

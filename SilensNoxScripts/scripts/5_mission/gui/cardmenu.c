@@ -1,17 +1,18 @@
+//Menu for displaying the IDCard by Eddy
 class CardMenu extends UIScriptedMenu {
     
     override Widget Init() {
-        layoutRoot = GetGame().GetWorkspace().CreateWidgets("SilensNox/gui/card_menu.layout");
+        layoutRoot = GetGame().GetWorkspace().CreateWidgets("SilensNoxScripts/gui/card_menu.layout");
 
-        /*PlayerBase player = PlayerBase.Cast(GetGame().GetPlayer());
-        ItemCard card = ItemCard.Cast(player.GetCard());
+        PlayerBase player = PlayerBase.Cast(GetGame().GetPlayer());
+        SN_IDCard card = SN_IDCard.Cast(player.GetItemInHands());
         if(card) {
             SetCard(card);
-        }*/ 
+        }
         return layoutRoot;
     }
 
-    void SetCard(ItemCard card) {
+    void SetCard(SN_IDCard card) {
         if (card)
 		{
 			CardMenu.UpdateItemInfo(layoutRoot, card);
@@ -49,11 +50,10 @@ class CardMenu extends UIScriptedMenu {
 		return false;
 	}
 
-    static void UpdateItemInfo(Widget root_widget, ItemCard card) {
+    static void UpdateItemInfo(Widget root_widget, SN_IDCard card) {
         if (!root_widget || !card) return;
 	
-        WidgetTrySetText(root_widget, "PlayerNameWidget", card.GetPlayername());
-        PrintMessageToPlayer("Trying to update widget text");
+        WidgetTrySetText(root_widget, "PlayerNameWidget", card.GetPlayername(), 0);
     }
 
     static void WidgetTrySetText(Widget root_widget, string widget_name, string text, int color = 0)
@@ -82,18 +82,4 @@ class CardMenu extends UIScriptedMenu {
 			rt_widget.Update();
 		}
     }
-
-    static void PrintMessageToPlayer(string txt) {
-		
-	    PlayerBase player = PlayerBase.Cast(GetGame().GetPlayer());	
-		
-	    if ( GetGame().IsServer() && GetGame().IsMultiplayer() )
-	    {
-		    player.MessageImportant( txt);
-	    } else 
-	    {
-    	    GetGame().GetMission().OnEvent( ChatMessageEventTypeID, new ChatMessageEventParams( CCDirect, "", txt, "" ) );
-	    }
-		
-	}
 }

@@ -409,7 +409,7 @@ modded class CraftBannerMount extends RecipeBase
 		Debug.Log("Recipe Do method called","recipes");
 	}
 };
-modded class CraftJointMung extends RecipeBase
+/*modded class CraftJointMung extends RecipeBase
 {	
 	override void Init()
 	{
@@ -478,7 +478,7 @@ modded class CraftJointMung extends RecipeBase
 	{
 		Debug.Log("Recipe Do method called","recipes");
 	}
-};
+}; */
 class craft_potted_plant2 extends RecipeBase
 {	
 	override void Init()
