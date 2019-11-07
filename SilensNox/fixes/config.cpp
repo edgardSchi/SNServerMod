@@ -34,6 +34,65 @@ class CfgPatches
         };
     };
 };
+class cfgCharacterCreation
+{
+	format="Survivor%1_%2";
+	gender[]=
+	{
+		"Female",
+		"Male"
+	};
+	personalityMale[]=
+	{
+		"Mirek",
+		"Boris",
+		"Cyril",
+		"Denis",
+		"Elias",
+		"Francis",
+		"Guo",
+		"Hassan",
+		"Indar",
+		"Jose",
+		"Kaito",
+		"Lewis",
+		"Manua",
+		"Niki",
+		"Oliver",
+		"Peter",
+		"Quinn",
+		"Rolf",
+		"Seth",
+		"Taiki"
+	};
+	personalityFemale[]=
+	{
+		"Eva",
+		"Frida",
+		"Gabi",
+		"Helga",
+		"Irena",
+		"Judy",
+		"Keiko",
+		"Linda",
+		"Maria",
+		"Naomi"
+	};
+	top[]=
+	{
+		"TrackSuitJacket_Red"
+	};
+	bottom[]=
+	{
+		"TrackSuitPants_Red"
+	};
+	shoe[]=
+	{
+		"AthleticShoes_Black"
+	};
+	maleCustom[]={};
+	femaleCustom[]={};
+};
 class CfgVehicles
 {
     class Edible_Base;
