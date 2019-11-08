@@ -1,6 +1,7 @@
 modded class PlayerBase {
     
     bool enterIDCardMenu;
+    bool enterSNNoteMenu;
 
     SN_IDCard m_Card = null;
 

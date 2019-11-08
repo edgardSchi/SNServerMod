@@ -12,7 +12,8 @@ class CfgPatches
         {
             "DZ_Data",
 			"DZ_Gear_Medical",
-			"OP_Water"
+			"OP_Water",
+			"DZ_Gear_Consumables"
         };
     };
 };
@@ -25,6 +26,12 @@ class CfgVehicles
 	class Barrel_ColorBase;
 	class CanisterGasoline;
 	class Container_Base;
+	class Paper;
+
+	class SN_SpawnNote : Paper {
+		displayName = "Seltsamer Zettel";
+		descriptionShort = "";
+	};
 	class SN_Roleplay_Base: Container_Base
 	{
 		scope=0;

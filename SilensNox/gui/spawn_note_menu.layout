@@ -1,0 +1,129 @@
+FrameWidgetClass rootFrame {
+ size 653.11896 761.22406
+ halign center_ref
+ valign center_ref
+ hexactpos 1
+ vexactpos 1
+ hexactsize 1
+ vexactsize 1
+ {
+  PanelWidgetClass PanelWidget0 {
+   ignorepointer 1
+   position 3.66817 1.75125
+   size 646.25098 757.50403
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style rover_sim_colorable
+   {
+    TextWidgetClass TextWidget0 {
+     ignorepointer 1
+     color 0.0196 0.0196 0.0196 1
+     position -5.24782 -109.154
+     size 543.39301 57.446
+     halign center_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     scaled 1
+     style Normal
+     text "Geh nicht zu weit in den"
+     font "gui/fonts/metronbook48"
+     "text color" 0.0157 0.0157 0.0157 1
+     "exact text" 0
+     "size to text h" 1
+     "size to text v" 0
+    }
+    TextWidgetClass TextWidget1 {
+     ignorepointer 1
+     color 0.0196 0.0196 0.0196 1
+     position -5.24781 -51.428
+     size 505.608 57.446
+     halign center_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     scaled 1
+     style Normal
+     text "Westen."
+     font "gui/fonts/metronbook48"
+     "text color" 0.0157 0.0157 0.0157 1
+     "exact text" 0
+     "size to text h" 0
+     "size to text v" 0
+    }
+    TextWidgetClass TextWidget2 {
+     ignorepointer 1
+     color 0.0196 0.0196 0.0196 1
+     position -5.24781 15.744
+     size 505.608 57.446
+     halign center_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     scaled 1
+     style Normal
+     text "Folge der Strasse!"
+     font "gui/fonts/metronbook48"
+     "text color" 0.0157 0.0157 0.0157 1
+     "exact text" 0
+     "size to text h" 0
+     "size to text v" 0
+    }
+    ButtonWidgetClass ButtonWidget0 {
+     color 1 1 1 0
+     position 593.63995 3.98332
+     size 48 48
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     userID 2
+     {
+      ImageWidgetClass IconClose {
+       ignorepointer 1
+       color 0 0 0 1
+       size 48 48
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       image0 "set:dayz_gui image:exit"
+       mode blend
+       "src alpha" 1
+      }
+     }
+    }
+    TextWidgetClass TextWidget3 {
+     ignorepointer 1
+     color 0.0196 0.0196 0.0196 1
+     position 0.00003 330.61301
+     size 505.608 57.446
+     halign center_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     scaled 1
+     style Normal
+     text "-Cerberus"
+     font "gui/fonts/metronbook48"
+     "text color" 0.0157 0.0157 0.0157 1
+     "exact text" 0
+     "size to text h" 0
+     "size to text v" 0
+    }
+   }
+  }
+ }
+}

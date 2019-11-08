@@ -2,7 +2,7 @@
 class CardMenu extends UIScriptedMenu {
     
     override Widget Init() {
-        layoutRoot = GetGame().GetWorkspace().CreateWidgets("SilensNoxScripts/gui/card_menu.layout");
+        layoutRoot = GetGame().GetWorkspace().CreateWidgets("SilensNox/gui/card_menu.layout");
 
         PlayerBase player = PlayerBase.Cast(GetGame().GetPlayer());
         SN_IDCard card = SN_IDCard.Cast(player.GetItemInHands());
