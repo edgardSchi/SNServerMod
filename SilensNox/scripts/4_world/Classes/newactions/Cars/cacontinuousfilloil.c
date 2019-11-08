@@ -12,7 +12,7 @@ modded class CAContinuousFillOil: ActionContinuousBase {
 		}
 		
 		
-		if ( GetGame().IsServer() )
+		if ( GetGame().IsServer() || GetGame().IsMultiplayer())
 		{
 			if ( action_data.m_MainItem ) // Item EngineOil gets deleted after full consumption
 				action_data.m_MainItem.AddQuantity( -m_SpentQuantity );
@@ -23,6 +23,7 @@ modded class CAContinuousFillOil: ActionContinuousBase {
             float currentHealth = car.GetHealth("Engine", "Health");
             car.SetHealth("Engine", "Health", m_SpentQuantity + car.GetHealth("Engine", "Health"));		//Repair Engine
 			car.SetHealth("FuelTank", "Health", m_SpentQuantity + car.GetHealth("FuelTank", "Health"));	//Repair Tank
+			
 
 			car.SetSynchDirty();
 		}

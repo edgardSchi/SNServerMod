@@ -1,4 +1,4 @@
-class CfgPatches
+class CfgPatches // Dont try to steal our stuff ... DMCA's are funny c:
 {
 	class SilensNox
 	{
