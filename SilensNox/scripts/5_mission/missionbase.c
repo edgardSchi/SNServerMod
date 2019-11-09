@@ -124,6 +124,16 @@ modded class MissionBase {
 		{
 			menu.SetID(id);
 		}
+		
+		if ( id == MENU_CHAT_INPUT )
+		{
+			menu = new ExpansionChatInputMenu;
+		}
+
+		if (menu)
+		{
+			menu.SetID(id);
+		}
 
 		return menu;
     }
