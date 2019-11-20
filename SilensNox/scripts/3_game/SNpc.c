@@ -57,14 +57,14 @@ modded class PlayerConstants
 	static const float METABOLIC_SPEED_ENERGY_BASAL		= 0.001;		//energy loss per second while idle
 	
 	static const float METABOLIC_SPEED_ENERGY_WALK		= 0.035; 		//energy loss per second
-	static const float METABOLIC_SPEED_ENERGY_JOG		= 0.070; 	//energy loss per second
-	static const float METABOLIC_SPEED_ENERGY_SPRINT	= 0.200; 		//energy loss per second
+	static const float METABOLIC_SPEED_ENERGY_JOG		= 0.2; 	//energy loss per second
+	static const float METABOLIC_SPEED_ENERGY_SPRINT	= 0.4; 		//energy loss per second
 	
 	static const float METABOLIC_SPEED_WATER_BASAL		= 0.002; 	//water loss per second while idle
 	
 	static const float METABOLIC_SPEED_WATER_WALK		= 0.045; 		//water loss per second
-	static const float METABOLIC_SPEED_WATER_JOG		= 0.100; 		//water loss per second
-	static const float METABOLIC_SPEED_WATER_SPRINT		= 0.400; 		//water loss per second
+	static const float METABOLIC_SPEED_WATER_JOG		= 0.35; 		//water loss per second
+	static const float METABOLIC_SPEED_WATER_SPRINT		= 0.8; 		//water loss per second
 	//--------------------------------------------------------
 	
 	static const float	THRESHOLD_HEAT_COMFORT_PLUS_WARNING		= 0.2;	//missing comment
@@ -122,8 +122,8 @@ modded class PlayerConstants
 	static const float HEALTH_REGEN_MIN						= 0.0005;	//health regen rate at BLOOD_THRESHOLD_FATAL blood level
 	static const float HEALTH_REGEN_MAX						= 0.001;		//health regen rate at MAXIMUM blood level
 	
-	static const float UNCONSCIOUS_THRESHOLD				= 25.0;		//player goes unconscious when we get under this threshold
-	static const float CONSCIOUS_THRESHOLD					= 70.0;		//player regains consciousness when he gets above this threshold
+	static const float UNCONSCIOUS_THRESHOLD				= 5.0;		//player goes unconscious when we get under this threshold
+	static const float CONSCIOUS_THRESHOLD					= 90.0;		//player regains consciousness when he gets above this threshold
 	
 	static const float SHOCK_REFILL_CONSCIOUS_SPEED			= 5;		//shock refill speed when the player is conscious
 	static const float SHOCK_REFILl_UNCONSCIOUS_SPEED		= 1;		//shock refill speed when the player is unconscious
@@ -131,7 +131,7 @@ modded class PlayerConstants
 	static const float SHOCK_DAMAGE_BLOOD_THRESHOLD_HIGH	= 3000;		// we start dealing shock damage over time when we get at this value or lower
 	static const float SHOCK_DAMAGE_BLOOD_THRESHOLD_LOW		= 2500; 	// the closer we get to this value, the higher the over time shock damage we deal
 	
-	static const float SHOCK_DAMAGE_HIGH					= 20; 		// shock damage per second when the blood is near the upper blood threshold
+	static const float SHOCK_DAMAGE_HIGH					= 5; 		// shock damage per second when the blood is near the upper blood threshold
 	static const float SHOCK_DAMAGE_LOW						= 20; 		// shock damage per second when the blood is near the lower blood threshold
 	
 	static const float SHOCK_REFILL_COOLDOWN_AFTER_HIT 		= 15; 		// duration of cooldown during which shock regeneration is paused
