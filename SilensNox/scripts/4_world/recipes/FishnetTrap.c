@@ -18,7 +18,7 @@ class Fishnetzu extends RecipeBase
 		m_MinDamageIngredient[1] = -1;//-1 = disable check
 		m_MaxDamageIngredient[1] = 3;//-1 = disable check
 		
-		m_MinQuantityIngredient[1] = 2;//-1 = disable check
+		m_MinQuantityIngredient[1] = 1;//-1 = disable check
 		m_MaxQuantityIngredient[1] = -1;//-1 = disable check
 		//----------------------------------------------------------------------------------------------------------------------
 		
@@ -29,7 +29,7 @@ class Fishnetzu extends RecipeBase
 		m_IngredientAddHealth[0] = 0;// 0 = do nothing
 		m_IngredientSetHealth[0] = -1; // -1 = do nothing
 		m_IngredientAddQuantity[0] = -1;// 0 = do nothing
-		m_IngredientDestroy[0] = false;//true = destroy, false = do nothing
+		m_IngredientDestroy[0] = true;//true = destroy, false = do nothing
 		m_IngredientUseSoftSkills[0] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
@@ -43,7 +43,7 @@ class Fishnetzu extends RecipeBase
 		
 		m_IngredientAddHealth[1] = 0;// 0 = do nothing
 		m_IngredientSetHealth[1] = -1; // -1 = do nothing
-		m_IngredientAddQuantity[1] = -2;// 0 = do nothing
+		m_IngredientAddQuantity[1] = -1;// 0 = do nothing
 		m_IngredientDestroy[1] = true;// false = do nothing
 		m_IngredientUseSoftSkills[1] = false;// set 'true' to allow modification of the values by softskills on this ingredient
 		//----------------------------------------------------------------------------------------------------------------------

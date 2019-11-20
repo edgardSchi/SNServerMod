@@ -30,16 +30,6 @@ class cfgVehicles
 		descriptionShort="HIPS";
 		model="\SilensNox\weapon\Katana\KatanaSheath_g.p3d";
 		inventorySlot="Hips";
-		ChangeInventorySlot[]=
-		{
-			"Hips"
-		};
-		ChangeIntoOnAttach[]=
-		{
-			"",
-			"SN_KatanaSheath_Back"
-		};
-		ChangeIntoOnDetach="M4A1";
 		attachments[]=
 		{
 			"SNKatanaSlot"
@@ -61,7 +51,6 @@ class cfgVehicles
 		randomQuantity=3;
 		hiddenSelections[]=
 		{
-			"camoGround",
 			"camoMale",
 			"camoFemale"
 		};
@@ -145,126 +134,19 @@ class cfgVehicles
 			};
 		};
 	};
-	class SN_KatanaSheath_Back: Clothing
+	class SN_KatanaSheath_Back: SN_KatanaSheath_Hip
 	{
-		scope=2;
-		displayName="Katana Scheide";
 		descriptionShort="BACK";
-		model="\SilensNox\weapon\Katana\KatanaSheath_g.p3d";
 		inventorySlot="Back";
-		ChangeInventorySlot[]=
-		{
-			"Back"
-		};
-		ChangeIntoOnAttach[]=
-		{
-			"SN_KatanaSheath_Hip",
-			""
-		};
-		ChangeIntoOnDetach="SKS";
-		attachments[]=
-		{
-			"SNKatanaSlot"
-		};
 		itemInfo[]=
 		{
 			"Clothing",
 			"Back"
 		};
-		rotationFlags=16;
-		weight=1300;
-		itemSize[]={4,5};
-		itemsCargoSize[]={7,6};
-		absorbency=0.30000001;
-		heatIsolation=0.1;
-		repairableWithKits[]={5,3};
-		repairCosts[]={30,25};
-		soundAttType="Outdoor";
-		randomQuantity=3;
-		hiddenSelections[]=
-		{
-			"camoGround",
-			"camoMale",
-			"camoFemale"
-		};
 		class ClothingTypes
 		{
 			male="\SilensNox\weapon\Katana\KatanaSheath_m.p3d";
 			female="\SilensNox\weapon\Katana\KatanaSheath.p3d";
-		};
-		class DamageSystem
-		{
-			class GlobalHealth
-			{
-				class Health
-				{
-					hitpoints=100;
-					healthLevels[]=
-					{
-						
-						{
-							1,
-							
-							{
-								"SilensNox\weapon\Katana\Data\Katana.rvmat"
-							}
-						},
-						
-						{
-							0.69999999,
-							
-							{
-								"SilensNox\weapon\Katana\Data\Katana.rvmat"
-							}
-						},
-						
-						{
-							0.5,
-							
-							{
-								"SilensNox\weapon\Katana\Data\Katana_damage.rvmat"
-							}
-						},
-						
-						{
-							0.30000001,
-							
-							{
-								"SilensNox\weapon\Katana\Data\Katana_damage.rvmat"
-							}
-						},
-						
-						{
-							0,
-							
-							{
-								"SilensNox\weapon\Katana\Data\Katana_destruct.rvmat"
-							}
-						}
-					};
-				};
-			};
-		};
-		class AnimEvents
-		{
-			class SoundWeapon
-			{
-				class pickUpItem_Light
-				{
-					soundSet="pickUpBackPack_Plastic_Light_SoundSet";
-					id=796;
-				};
-				class pickUpItem
-				{
-					soundSet="pickUpBackPack_Plastic_SoundSet";
-					id=797;
-				};
-				class drop
-				{
-					soundset="taloonbag_drop_SoundSet";
-					id=898;
-				};
-			};
 		};
 	};
 	class SN_Katana: Inventory_Base

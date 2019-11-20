@@ -42,7 +42,8 @@ class CfgPatches
 			"MoreGuns_M14",
 			"MoreGuns_M1A",
 			"MoreGuns_Kar98",
-			"MoreGuns_AWM"
+			"MoreGuns_AWM",
+			"DZ_Pistols_pmm"
         };
     };
 };
@@ -104,7 +105,14 @@ class cfgWeapons
 	class MassType81_Base;
 	class MassMP153_Base;
 	class M1A_Base;
+	class MakarovIJ70_Base;
 	//ENDRQ
+	class MakarovIJ70: MakarovIJ70_Base
+	{
+		scope=2;
+		displayName="";
+		descriptionShort="";
+	};
 	class MassMP153: MassMP153_Base
 	{
 		scope = 2;

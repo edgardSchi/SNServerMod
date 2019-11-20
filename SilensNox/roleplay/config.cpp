@@ -27,7 +27,6 @@ class CfgVehicles
 	class CanisterGasoline;
 	class Container_Base;
 	class Paper;
-
 	class SN_SpawnNote : Paper {
 		displayName = "Seltsamer Zettel";
 		descriptionShort = "";

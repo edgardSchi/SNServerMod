@@ -30,7 +30,9 @@ class CfgPatches
 			"DZ_Gear_Camping",
 			"DZ_Gear_Containers",
 			"DZ_Characters",
-			"TheRanch_Vest"
+			"TheRanch_Vest",
+			"Mass_Food",
+			"DZ_Characters_Belts"
         };
     };
 };
@@ -93,6 +95,185 @@ class cfgCharacterCreation
 	maleCustom[]={};
 	femaleCustom[]={};
 };
+class BaseFoodStageTransitions
+{
+	class Raw
+	{
+		class ToBaked
+		{
+			transition_to=2;
+			cooking_method=1;
+		};
+		class ToBoiled
+		{
+			transition_to=3;
+			cooking_method=2;
+		};
+		class ToDried
+		{
+			transition_to=4;
+			cooking_method=3;
+		};
+		class ToBurned
+		{
+			transition_to=5;
+			cooking_method=3;
+		};
+		class ToRotten
+		{
+			transition_to=6;
+			cooking_method=4;
+		};
+	};
+	class Rotten
+	{
+		class ToBurned
+		{
+			transition_to=5;
+			cooking_method=1;
+		};
+	};
+	class Baked
+	{
+		class ToBurned
+		{
+			transition_to=5;
+			cooking_method=1;
+		};
+		class ToRotten
+		{
+			transition_to=6;
+			cooking_method=4;
+		};
+	};
+	class Boiled
+	{
+		class ToBaked
+		{
+			transition_to=2;
+			cooking_method=1;
+		};
+		class ToRotten
+		{
+			transition_to=6;
+			cooking_method=4;
+		};
+	};
+	class Dried
+	{
+		class ToBaked
+		{
+			transition_to=5;
+			cooking_method=1;
+		};
+		class ToBoiled
+		{
+			transition_to=3;
+			cooking_method=2;
+		};
+		class ToBurned
+		{
+			transition_to=5;
+			cooking_method=3;
+		};
+	};
+	class Burned
+	{
+	};
+};
+class NotCookable
+{
+	class Raw
+	{
+		class ToRotten
+		{
+			transition_to=6;
+			cooking_method=4;
+		};
+	};
+};
+class MeatStageTransitions: BaseFoodStageTransitions
+{
+};
+class FruitStageTransitions: BaseFoodStageTransitions
+{
+};
+class AnimalCorpsesStageTransitions: BaseFoodStageTransitions
+{
+};
+class MushroomsStageTransitions: BaseFoodStageTransitions
+{
+};
+class FoodAnimationSources
+{
+	class CS_Raw
+	{
+		source="user";
+		animPeriod=0.0099999998;
+		initPhase=1;
+	};
+	class CS_Rotten
+	{
+		source="user";
+		animPeriod=0.0099999998;
+		initPhase=1;
+	};
+	class CS_Baked
+	{
+		source="user";
+		animPeriod=0.0099999998;
+		initPhase=1;
+	};
+	class CS_Boiled
+	{
+		source="user";
+		animPeriod=0.0099999998;
+		initPhase=1;
+	};
+	class CS_Dried
+	{
+		source="user";
+		animPeriod=0.0099999998;
+		initPhase=1;
+	};
+	class CS_Burned
+	{
+		source="user";
+		animPeriod=0.0099999998;
+		initPhase=1;
+	};
+};
+class NutritionModifiers
+{
+	class General
+	{
+		base_stage="Raw";
+		class Raw
+		{
+			nutrition_properties[]={1,1,1,1,1};
+		};
+		class Rotten
+		{
+			nutrition_properties[]={0.5,0.75,1,0.25,1};
+		};
+		class Baked
+		{
+			nutrition_properties[]={2,0.5,0.75,0.75,1};
+		};
+		class Boiled
+		{
+			nutrition_properties[]={1,1,0.80000001,0.80000001,1};
+		};
+		class Dried
+		{
+			nutrition_properties[]={4,0.1,0.5,0.80000001,1};
+		};
+		class Burned
+		{
+			nutrition_properties[]={1,0.25,0.75,0.1,1};
+		};
+	};
+};
 class CfgVehicles
 {
     class Edible_Base;
@@ -100,7 +281,6 @@ class CfgVehicles
 	class ZombieMaleBase;
 	class ZombieFemaleBase;
 	class Container_Base;
-	class Inventory_Base;
 	class Trap_Base;
 	class Bottle_Base;
 	class CarScript;
@@ -110,6 +290,1848 @@ class CfgVehicles
 	class PlantBase;
 	class PlateCarrierVest;
 	class Tripod;
+	class MushroomBase;
+	class Clothing;
+	class Static;
+	class Inventory_Base: Static
+	{
+		repairableWithKits[]={5};
+		repairCosts[]={25};
+	};
+	class Clothing_Base: Inventory_Base
+	{
+		repairableWithKits[]={5};
+		repairCosts[]={25};
+	};
+	class MilitaryBelt: Clothing
+	{
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						
+						{
+							1,
+							
+							{
+								"DZ\characters\belts\data\mil_belt.rvmat"
+							}
+						},
+						
+						{
+							0.69999999,
+							
+							{
+								"DZ\characters\belts\data\mil_belt.rvmat"
+							}
+						},
+						
+						{
+							0.5,
+							
+							{
+								"DZ\characters\belts\data\mil_belt.rvmat"
+							}
+						},
+						
+						{
+							0.30000001,
+							
+							{
+								"DZ\characters\belts\data\mil_belt.rvmat"
+							}
+						},
+						
+						{
+							0,
+							
+							{
+								"DZ\characters\belts\data\mil_belt.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
+	};
+	class MassMeth: Inventory_Base
+	{
+		itemSize[] = {2,2};
+    };
+	class FieldShovel: Inventory_Base
+	{
+		scope=2;
+		inventorySlot[]=
+		{
+			"Shoulder",
+			"Melee"
+		};
+	};
+	class FarmingHoe: Inventory_Base
+	{
+		scope=2;
+		inventorySlot[]=
+		{
+			"Shoulder",
+			"Melee"
+		};
+	};
+	class Apple: Edible_Base
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={2.5,50,80,1,0};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]={2,37.5,40,1,0,16};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={1,1,1};
+					nutrition_properties[]={1.75,87.5,60,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={1,2,2};
+					nutrition_properties[]={1.5,62.5,80,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={2,3,3};
+					nutrition_properties[]={0.75,50,8,1,0};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={1,4,4};
+					nutrition_properties[]={2,37.5,20,1,0};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class Plum: Edible_Base
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={2.5,50,80,1,0};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]={2,37.5,40,1,0,16};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={1,1,1};
+					nutrition_properties[]={1.75,87.5,60,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={2,2,2};
+					nutrition_properties[]={1.5,62.5,80,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={3,3,3};
+					nutrition_properties[]={0.75,50,8,1,0};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={4,4,4};
+					nutrition_properties[]={2,37.5,20,1,0};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class Pear: Edible_Base
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={2.5,50,80,1,0};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]={2,37.5,40,1,0,16};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1.75,87.5,60,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1.5,62.5,80,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={1,3,3};
+					nutrition_properties[]={0.75,50,8,1,0};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={0,4,4};
+					nutrition_properties[]={2,37.5,20,1,0};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class Tomato: Edible_Base
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={2.5,20,95,1,0};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]={2,15,47.5,1,0,16};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1.75,35,71.25,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1.5,25,95,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={1,3,3};
+					nutrition_properties[]={0.75,20,9.5,1,0};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={1,4,4};
+					nutrition_properties[]={2,15,23.75,1,0};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class GreenBellPepper: Edible_Base
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={2.5,20,95,1,0};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]={2,15,47.5,1,0,16};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1.75,35,71.25,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1.5,25,95,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={1,3,3};
+					nutrition_properties[]={0.75,20,9.5,1,0};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={1,4,4};
+					nutrition_properties[]={2,15,23.75,1,0};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class Zucchini: Edible_Base
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={2.5,20,95,1,0};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]={2,15,47.5,1,0,16};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1.75,35,71.25,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1.5,25,95,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={1,3,3};
+					nutrition_properties[]={0.75,20,9.5,1,0};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={0,4,4};
+					nutrition_properties[]={2,15,23.75,1,0};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class SlicedPumpkin: Edible_Base
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={2.5,20,95,1,0};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]={2,15,47.5,1,0,16};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={1,1,1};
+					nutrition_properties[]={1.75,35,71.25,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={1,2,2};
+					nutrition_properties[]={1.5,25,95,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={2,3,3};
+					nutrition_properties[]={0.75,20,9.5,1,0};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={2,4,4};
+					nutrition_properties[]={2,15,23.75,1,0};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class Potato: Edible_Base
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={2.5,20,95,1,0};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]={2,15,47.5,1,0,16};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1.75,35,71.25,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1.5,25,95,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={0,3,3};
+					nutrition_properties[]={0.75,20,9.5,1,0};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={0,4,4};
+					nutrition_properties[]={2,15,23.75,1,0};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class SambucusBerry: Edible_Base
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={2.5,50,80,1,0};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]={2,37.5,40,1,0,16};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1.75,87.5,60,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1.5,62.5,80,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={1,3,3};
+					nutrition_properties[]={0.75,50,8,1,0};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={0,4,4};
+					nutrition_properties[]={2,37.5,20,1,0};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class CaninaBerry: Edible_Base
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={2.5,50,80,1,0};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]={2,37.5,40,1,0,16};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1.75,87.5,60,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1.5,62.5,80,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={0,3,3};
+					nutrition_properties[]={0.75,50,8,1,0};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={0,4,4};
+					nutrition_properties[]={2,37.5,20,1,0};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class Cannabis: Edible_Base
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={1,284,293,30,1};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]={1,100,293,10,1,16};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1,69,172,70,1};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1,69,172,70,1};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={0,3,3};
+					nutrition_properties[]={1,69,172,70,1};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={0,4,4};
+					nutrition_properties[]={1,20,40,10,1};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class HumanSteakMeat: Edible_Base
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={2.5,130,70,1,0,4};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]=
+					{
+						2,
+						97.5,
+						35,
+						1,
+						0,
+						"4 + 		  16"
+					};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1.75,227.5,52.5,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1.5,162.5,70,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={0,3,3};
+					nutrition_properties[]={0.75,130,7,1,0};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={0,4,4};
+					nutrition_properties[]={2,97.5,17.5,1,0,16};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class GoatSteakMeat: Edible_Base
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={2.5,160,70,1,0,4};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]=
+					{
+						2,
+						120,
+						35,
+						1,
+						0,
+						"4 + 		  16"
+					};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1.75,280,52.5,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1.5,200,70,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={0,3,3};
+					nutrition_properties[]={0.75,160,7,1,0};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={0,4,4};
+					nutrition_properties[]={2,120,17.5,1,0,16};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class MouflonSteakMeat: Edible_Base
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={1,544,334,236,1,4};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]=
+					{
+						1,
+						250,
+						222,
+						35,
+						1,
+						"4 + 		  16"
+					};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1,537,222,129,1};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1,537,222,129,1};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={0,3,3};
+					nutrition_properties[]={1,390,130,180,1};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={0,4,4};
+					nutrition_properties[]={1,250,90,50,1,16};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class BoarSteakMeat: Edible_Base
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={2.5,130,70,1,0,4};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]=
+					{
+						2,
+						97.5,
+						35,
+						1,
+						0,
+						"4 + 		  16"
+					};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1.75,227.5,52.5,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1.5,162.5,70,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={0,3,3};
+					nutrition_properties[]={0.75,130,7,1,0};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={0,4,4};
+					nutrition_properties[]={2,97.5,17.5,1,0,16};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class PigSteakMeat: Edible_Base
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={2.5,130,70,1,0,4};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]=
+					{
+						2,
+						97.5,
+						35,
+						1,
+						0,
+						"4 + 		  16"
+					};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1.75,227.5,52.5,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1.5,162.5,70,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={0,3,3};
+					nutrition_properties[]={0.75,130,7,1,0};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={0,4,4};
+					nutrition_properties[]={2,97.5,17.5,1,0,16};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class DeerSteakMeat: Edible_Base
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={2.5,160,70,1,0,4};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]=
+					{
+						2,
+						120,
+						35,
+						1,
+						0,
+						"4 + 		  16"
+					};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1.75,280,52.5,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1.5,200,70,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={0,3,3};
+					nutrition_properties[]={0.75,160,7,1,0};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={0,4,4};
+					nutrition_properties[]={2,120,17.5,1,0,16};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class WolfSteakMeat: Edible_Base
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={2.5,140,70,1,0,4};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]=
+					{
+						2,
+						105,
+						35,
+						1,
+						0,
+						"4 + 		  16"
+					};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1.75,245,52.5,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1.5,175,70,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={0,3,3};
+					nutrition_properties[]={0.75,140,7,1,0};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={0,4,4};
+					nutrition_properties[]={2,105,17.5,1,0,16};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class BearSteakMeat: Edible_Base
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={1,544,334,236,1,4};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]=
+					{
+						1,
+						250,
+						222,
+						35,
+						1,
+						"4 + 		  16"
+					};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1,537,222,129,1};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1,537,222,129,1};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={0,3,3};
+					nutrition_properties[]={1,390,130,180,1};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={0,4,4};
+					nutrition_properties[]={1,250,90,50,1,16};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class CowSteakMeat: Edible_Base
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={2.5,200,65,1,0,4};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]=
+					{
+						2,
+						150,
+						32.5,
+						1,
+						0,
+						"4 + 		  16"
+					};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1.75,350,48.75,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1.5,250,65,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={0,3,3};
+					nutrition_properties[]={0.75,200,6.5,1,0};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={0,4,4};
+					nutrition_properties[]={2,150,16.25,1,0,16};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class SheepSteakMeat: Edible_Base
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={2.5,160,70,1,0,4};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]=
+					{
+						2,
+						120,
+						35,
+						1,
+						0,
+						"4 + 		  16"
+					};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1.75,280,52.5,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1.5,200,70,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={0,3,3};
+					nutrition_properties[]={0.75,160,7,1,0};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={0,4,4};
+					nutrition_properties[]={2,120,17.5,1,0,16};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class FoxSteakMeat: Edible_Base
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={1,544,334,236,1,4};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]=
+					{
+						1,
+						250,
+						222,
+						35,
+						1,
+						"4 + 		  16"
+					};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1,537,222,129,1};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1,537,222,129,1};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={0,3,3};
+					nutrition_properties[]={1,390,130,180,1};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={0,4,4};
+					nutrition_properties[]={1,250,90,50,1,16};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class ChickenBreastMeat: Edible_Base
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={2.5,110,75,1,0,4};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]=
+					{
+						2,
+						82.5,
+						37.5,
+						1,
+						0,
+						"4 + 		  16"
+					};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1.75,192.5,56.25,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1.5,137.5,75,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={0,3,3};
+					nutrition_properties[]={0.75,110,7.5,1,0};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={0,4,4};
+					nutrition_properties[]={2,82.5,18.75,1,0,16};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class RabbitLegMeat: Edible_Base
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={1,517,338,218,1,4};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]=
+					{
+						1,
+						150,
+						338,
+						30,
+						1,
+						"4 + 		  16"
+					};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1,480,184,155,1};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1,480,184,155,1};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={0,3,3};
+					nutrition_properties[]={1,380,120,150,1};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={0,4,4};
+					nutrition_properties[]={1,100,50,40,1,16};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class CarpFilletMeat: Edible_Base
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={1,800,360,184,1,4};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]=
+					{
+						1,
+						200,
+						360,
+						30,
+						1,
+						"4 + 		  16"
+					};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1,600,222,129,1};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1,560,160,150,1};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={0,3,3};
+					nutrition_properties[]={1,390,130,180,1};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={0,4,4};
+					nutrition_properties[]={1,180,40,50,1,16};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class MackerelFilletMeat: Edible_Base
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={1,800,360,184,1,4};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]=
+					{
+						1,
+						200,
+						360,
+						30,
+						1,
+						"4 + 		  16"
+					};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1,600,222,129,1};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1,560,160,150,1};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={0,3,3};
+					nutrition_properties[]={1,390,130,180,1};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={0,4,4};
+					nutrition_properties[]={1,180,40,50,1,16};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class Lard: Edible_Base
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={2.5,900,0,1,0,4};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]=
+					{
+						2,
+						675,
+						0,
+						1,
+						0,
+						"4 + 		  16"
+					};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1.75,1575,0,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1.5,1125,0,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={0,3,3};
+					nutrition_properties[]={0.75,900,0,1,0};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={0,4,4};
+					nutrition_properties[]={2,675,0,1,0,16};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class Sardines: Edible_Base
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={1,69,172,70,1};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]={1,40,160,25,1};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1,60,140,60,1};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1,60,160,60,1};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={1,3,3};
+					nutrition_properties[]={1,50,70,50,1};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={1,4,4};
+					nutrition_properties[]={1,20,60,20,1};
+					cooking_properties[]={500,500};
+				};
+			};
+			class FoodStageTransitions: AnimalCorpsesStageTransitions
+			{
+			};
+		};
+	};
+	class AgaricusMushroom: MushroomBase
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={2.5,20,95,1,0};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]={2,15,47.5,1,0,16};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1.75,35,71.25,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1.5,25,95,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={1,3,3};
+					nutrition_properties[]={0.75,20,9.5,1,0};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={0,4,4};
+					nutrition_properties[]={2,15,23.75,1,0};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class AmanitaMushroom: MushroomBase
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={2.5,20,95,1,0};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]={2,15,47.5,1,0,16};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={1,1,1};
+					nutrition_properties[]={1.75,35,71.25,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={1,2,2};
+					nutrition_properties[]={1.5,25,95,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={1,3,3};
+					nutrition_properties[]={0.75,20,9.5,1,0};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={1,4,4};
+					nutrition_properties[]={2,15,23.75,1,0};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class MacrolepiotaMushroom: MushroomBase
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={2.5,20,95,1,0};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]={2,15,47.5,1,0,16};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={1,1,1};
+					nutrition_properties[]={1.75,35,71.25,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={1,2,2};
+					nutrition_properties[]={1.5,25,95,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={2,3,3};
+					nutrition_properties[]={0.75,20,9.5,1,0};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={2,4,4};
+					nutrition_properties[]={2,15,23.75,1,0};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class LactariusMushroom: MushroomBase
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={2.5,20,95,1,0};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]={2,15,47.5,1,0,16};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1.75,35,71.25,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1.5,25,95,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={1,3,3};
+					nutrition_properties[]={0.75,20,9.5,1,0};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={0,4,4};
+					nutrition_properties[]={2,15,23.75,1,0};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class PsilocybeMushroom: MushroomBase
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={2.5,20,95,1,0};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]={2,15,47.5,1,0,16};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1.75,35,71.25,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1.5,25,95,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={1,3,3};
+					nutrition_properties[]={0.75,20,9.5,1,0};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={0,4,4};
+					nutrition_properties[]={2,15,23.75,1,0};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class AuriculariaMushroom: MushroomBase
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={2.5,20,95,1,0};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]={2,15,47.5,1,0,16};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1.75,35,71.25,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1.5,25,95,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={0,3,3};
+					nutrition_properties[]={0.75,20,9.5,1,0};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={0,4,4};
+					nutrition_properties[]={2,15,23.75,1,0};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class BoletusMushroom: MushroomBase
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={2.5,20,95,1,0};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]={2,15,47.5,1,0,16};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={0,1,1};
+					nutrition_properties[]={1.75,35,71.25,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={0,2,2};
+					nutrition_properties[]={1.5,25,95,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={1,3,3};
+					nutrition_properties[]={0.75,20,9.5,1,0};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={1,4,4};
+					nutrition_properties[]={2,15,23.75,1,0};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
+	class PleurotusMushroom: MushroomBase
+	{
+		class Food
+		{
+			class FoodStages
+			{
+				class Raw
+				{
+					visual_properties[]={0,0,0};
+					nutrition_properties[]={2.5,20,95,1,0};
+					cooking_properties[]={0,0};
+				};
+				class Rotten
+				{
+					visual_properties[]={-1,-1,5};
+					nutrition_properties[]={2,15,47.5,1,0,16};
+					cooking_properties[]={0,0};
+				};
+				class Baked
+				{
+					visual_properties[]={1,1,1};
+					nutrition_properties[]={1.75,35,71.25,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Boiled
+				{
+					visual_properties[]={1,2,2};
+					nutrition_properties[]={1.5,25,95,1,0};
+					cooking_properties[]={500,500};
+				};
+				class Dried
+				{
+					visual_properties[]={2,3,3};
+					nutrition_properties[]={0.75,20,9.5,1,0};
+					cooking_properties[]={500,500,500};
+				};
+				class Burned
+				{
+					visual_properties[]={1,4,4};
+					nutrition_properties[]={2,15,23.75,1,0};
+					cooking_properties[]={500,500};
+				};
+			};
+		};
+	};
 	class MetalPlate: Inventory_Base
 	{
 		varStackMax=20;
@@ -600,6 +2622,12 @@ class CfgVehicles
 				};
 			};
 		};
+	};
+	class MassGoatStew: GoatSteakMeat
+	{
+		displayName = "Stew";
+		descriptionShort = "Von wen wurde das wohl gekocht ? ... Villeicht von Froschi ? ... 'Mass'";
+		itemSize[]={2,2};
 	};
 	class SN_SodaCan_Kvass: SN_SodaCan_ColorBase
 	{

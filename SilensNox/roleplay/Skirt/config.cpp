@@ -18,12 +18,13 @@ class CfgVehicles
 {
 	class Inventory_Base;
 	class Skirt_ColorBase;
-	class SN_Skirttest: Skirt_ColorBase
+	class Clothing;
+	class SN_Skirttest: Clothing
 	{
 		scope=2;
 		displayName="Skirt";
 		descriptionShort="I CAN SEE YOUR PANTSU";
-		model="SilensNox\roleplay\Skirt\Skirt.p3d";
+		
 		hiddenSelectionsTextures[]=
 		{
 			"SilensNox\roleplay\Skirt\Data\Skirt_co.paa"
@@ -31,6 +32,29 @@ class CfgVehicles
 		hiddenSelectionsMaterials[]=
 		{
 			"SilensNox\roleplay\Skirt\Data\Skirt.rvmat"
+		};
+		model="SilensNox\roleplay\Skirt\Skirt.p3d";
+		class ClothingTypes
+		{
+			male="SilensNox\roleplay\Skirt\Skirt.p3d";
+			female="SilensNox\roleplay\Skirt\Skirt.p3d";
+		};
+		quickBarBonus=2;
+		itemSize[]={3,1};
+		itemsCargoSize[]={0,0};
+		weight=470;
+		ragQuantity=2;
+		absorbency=0.69999999;
+		heatIsolation=0.30000001;
+		visibilityModifier=0.94999999;
+		repairableWithKits[]={5,2};
+		repairCosts[]={30,25};
+		inventorySlot="Hips";
+		simulation="clothing";
+		itemInfo[]=
+		{
+			"Clothing",
+			"Hips"
 		};
 	};
 };
