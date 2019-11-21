@@ -17,6 +17,7 @@ class CfgPatches
 class CfgVehicles
 {
 	class ItemBook;
+	class Worm;
 	class SN_Froschi: ItemBook
 	{
 		scope=2;
@@ -27,5 +28,11 @@ class CfgVehicles
 		{
 			"SilensNox\roleplay\UniqueItems\Data\Diary_co.paa"
 		};
+	};
+	class Pupsi: Worm
+	{
+		scope=2;
+		displayName="Pupsi";
+		descriptionShort="Vorsicht vor dem One-Hit";
 	};
 };
