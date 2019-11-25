@@ -45,8 +45,8 @@ class Craft545x39FilledCasing extends RecipeBase
 		//result1
 		AddResult("ITEMC");//add results here
 
-		m_ResultSetFullQuantity[0] = true;//true = set full quantity, false = do nothing
-		m_ResultSetQuantity[0] = -1;//-1 = do nothing
+		m_ResultSetFullQuantity[0] = false;//true = set full quantity, false = do nothing
+		m_ResultSetQuantity[0] = 1;//-1 = do nothing
 		m_ResultSetHealth[0] = -1;//-1 = do nothing
 		m_ResultInheritsHealth[0] = -2;// (value) == -1 means do nothing; a (value) >= 0 means this result will inherit health from ingredient number (value);(value) == -2 means this result will inherit health from all ingredients averaged(result_health = combined_health_of_ingredients / number_of_ingredients)
 		m_ResultInheritsColor[0] = -1;// (value) == -1 means do nothing; a (value) >= 0 means this result classname will be a composite of the name provided in AddResult method and config value "color" of ingredient (value)
@@ -62,11 +62,7 @@ class Craft545x39FilledCasing extends RecipeBase
 
     override void Do(ItemBase ingredients[], PlayerBase player,array<ItemBase> results, float specialty_weight)//gets called upon recipe's completion
     {
-        /*ItemBase ingredient1;
-        Class.CastTo(ingredient1, ingredients[0]);
-        ingredient1.AddQuantity(-0);
-        
-        Debug.Log("Recipe Do method called","recipes");*/
+
 		
 		ItemBase CASING;
 		ItemBase POWDER;
@@ -79,9 +75,6 @@ class Craft545x39FilledCasing extends RecipeBase
 		int		casing_required = 1;
 		int		powder_required = 5;
 		
-		int		max_casing_stack = 50;
-		int		max_powder_stack = 1500;
-		
 		float	current_casing = CASING.GetQuantity();
 		float	current_powder = POWDER.GetQuantity();
 		
@@ -89,51 +82,20 @@ class Craft545x39FilledCasing extends RecipeBase
 		
 		for(int i = 0; i < current_casing; i++)
 		{
-			bullet_outcome = i++;
+			if((i + 1) * powder_required <= current_powder)
+			{
+				bullet_outcome++;
+			} 
+			else 
+			{
+				break;
+			}   
 		}
 		
-		CASING.AddQuantity( -bullet_outcome * casing_required )
-		POWDER.AddQuantity( -bullet_outcome * powder_required )
+		CASING.AddQuantity( -bullet_outcome * casing_required );
+		POWDER.AddQuantity( -bullet_outcome * powder_required );
+		bullet_outcome--;
 		OUTCOME.AddQuantity( bullet_outcome );
-		
-		
-		/*
-		ItemBase result;
-		Class.CastTo(result, results.Get(0));
-		ItemBase ingredient2 = ingredients[1];
-		int quantity = ingredient2.ConfigGetFloat("ragQuantity");
-		
-		result.SetQuantity(quantity);
-		
-		
-		float 	rags_health 	= CASING.GetHealth("","");
-		int 	rags_quantity 	= CASING.GetQuantity();
-		
-		float 	rags_combined_damage = (100 - rags_health) * rags_quantity;
-		
-		int 	liquid_quantity = POWDER.GetQuantity();
-		int 	liquid_required = rags_combined_damage * 2;
-		
-		float 	used_ratio = 0;
-		float	heal = 0;
-		
-		if( liquid_quantity > liquid_required )
-		{
-			POWDER.AddQuantity(-liquid_required);
-			heal = 	rags_combined_damage / rags_quantity;
-		}
-		else
-		{
-			POWDER.SetQuantity(0);
-			used_ratio = liquid_quantity / liquid_required;
-			heal = 	(rags_combined_damage / rags_quantity) * used_ratio;
-			
-		}
-		heal = Math.Clamp(heal, 0, (70 - rags_health));
-		CASING.AddHealth("", "",heal);
-		
-		
-		*/
 		
     }
 };

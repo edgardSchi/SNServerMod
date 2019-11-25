@@ -1,6 +1,6 @@
 class CfgPatches
 {
-    class SN_IDCard
+    class SN_Delme
     {
         units[]=
         {
@@ -19,17 +19,17 @@ class CfgVehicles
 	class Inventory_Base;
 	class ITEMA: Inventory_Base
 	{
-		varQuantityInit=50;
-		varQuantityMin=1;
-		varQuantityMax=50;
+		
 		scope=2;
 		displayName="ITEMA";
 		descriptionShort="???????";
 		model="SilensNox\roleplay\IDCard\IDCard.p3d";
-		lootCategory="Civillian";
-		targetCategory="loot";
 		weight=1;
 		itemSize[]={1,1};
+		canBeSplit=1;
+		varQuantityInit=50;
+		varQuantityMin=0;
+		varQuantityMax=50;
 		hiddenSelectionsTextures[]=
 		{
 			"SilensNox\roleplay\IDCard\Data\IDCard_co.paa"
@@ -41,15 +41,14 @@ class CfgVehicles
 	};
 	class ITEMB: Inventory_Base
 	{
-		varQuantityInit=1500;
-		varQuantityMin=1;
-		varQuantityMax=1500;
 		scope=2;
 		displayName="ITEMB";
 		descriptionShort="???????";
 		model="SilensNox\roleplay\VehicleKey\VehicleKey.p3d";
-		lootCategory="Civillian";
-		targetCategory="loot";
+		canBeSplit=1;
+		varQuantityInit=1500;
+		varQuantityMin=0;
+		varQuantityMax=1500;
 		weight=5;
 		itemSize[]={1,1};
 		hiddenSelectionsTextures[]=
@@ -63,15 +62,14 @@ class CfgVehicles
 	};
 	class ITEMC: Inventory_Base
 	{
-		varQuantityInit=5000;
-		varQuantityMin=1;
-		varQuantityMax=5000;
 		scope=2;
 		displayName="ITEMC";
 		descriptionShort="Eine Boombox um Musik zu hören! (Extra für Boris eingebaut)";
 		model="SilensNox\roleplay\Boombox\Boombox.p3d";
-		lootCategory="Civillian";
-		targetCategory="loot";
+		canBeSplit=1;
+		varQuantityInit=50;
+		varQuantityMin=0;
+		varQuantityMax=50;
 		weight=14000;
 		itemSize[]={7,5};
 		hiddenSelections[]=
