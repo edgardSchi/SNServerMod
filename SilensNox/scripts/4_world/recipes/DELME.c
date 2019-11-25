@@ -87,9 +87,9 @@ class Craft545x39FilledCasing extends RecipeBase
 		
 		float	bullet_outcome = 0;
 		
-		for(int i = 0; < current_casing; i++)
+		for(int i = 0; i < current_casing; i++)
 		{
-			bullet_outcome = i++
+			bullet_outcome = i++;
 		}
 		
 		
