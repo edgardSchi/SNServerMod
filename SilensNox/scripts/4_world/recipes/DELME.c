@@ -95,7 +95,11 @@ class Craft545x39FilledCasing extends RecipeBase
 		CASING.AddQuantity( -bullet_outcome * casing_required );
 		POWDER.AddQuantity( -bullet_outcome * powder_required );
 		bullet_outcome--;
-		OUTCOME.AddQuantity( bullet_outcome );
+
+		if(bullet_outcome < 1) {
+			OUTCOME.AddQuantity( bullet_outcome );
+		} 
+		
 		
     }
 };
