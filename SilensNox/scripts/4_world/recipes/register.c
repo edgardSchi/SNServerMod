@@ -109,6 +109,5 @@ modded class PluginRecipesManager
 		RegisterRecipe(new PaintMosinCamoGreen);
 		RegisterRecipe(new PaintSawedoffMosinCamoGreen);
 		RegisterRecipe(new PaintCz527CamoGreen);
-		RegisterRecipe(new Craft545x39FilledCasing);
 	}
 }
