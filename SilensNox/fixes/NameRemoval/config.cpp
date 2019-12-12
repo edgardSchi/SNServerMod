@@ -106,7 +106,23 @@ class cfgWeapons
 	class MassMP153_Base;
 	class M1A_Base;
 	class MakarovIJ70_Base;
+	class Massm16_Base;
 	//ENDRQ
+	class MassM16: Massm16_Base
+	{
+		scope=2;
+		displayName="";
+		descriptionShort="";
+	};
+	class NiphoriaM16: MassM16
+	{
+		scope=2;
+		displayName="Hentai!";
+		descriptionShort="BAKA";
+		hiddenSelections[] = {"zbytek"};
+		hiddenSelectionsTextures[] = {"SilensNox\fixes\NameRemoval\m16hentai_co.paa"};
+		hiddenSelectionsMaterials[] = {"SilensNox\fixes\NameRemoval\m16hentai.rvmat"};
+	};
 	class MakarovIJ70: MakarovIJ70_Base
 	{
 		scope=2;

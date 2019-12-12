@@ -303,6 +303,21 @@ class CfgVehicles
 		repairableWithKits[]={5};
 		repairCosts[]={25};
 	};
+	class PortableGasStove: Inventory_Base
+	{
+		class EnergyManager
+		{
+			switchOnAtSpawn=0;
+			autoSwitchOff=1;
+			autoSwitchOffWhenInCargo=1;
+			energyStorageMax=0;
+			energyUsagePerSecond=0.3;
+			energyAtSpawn=0;
+			powerSocketsCount=0;
+			plugType=7;
+			attachmentAction=1;
+		};
+	}
 	class MilitaryBelt: Clothing
 	{
 		class DamageSystem

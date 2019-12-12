@@ -548,7 +548,9 @@ class CfgVehicles
 	
 	// VehicleStart
 	class CivilianSedan;
-	class SN_Wolga_01: CivilianSedan
+	class CivilianSedan_Black;
+	class CivilianSedan_Wine;
+	class SN_Wolga_01: CivilianSedan_Wine
 	{
 		scope=2;
 		attachments[]=
@@ -618,7 +620,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class SN_Wolga_02: CivilianSedan
+	class SN_Wolga_02: CivilianSedan_Black
 	{
 		scope=2;
 		attachments[]=
@@ -758,7 +760,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class SN_Wolga_04: CivilianSedan
+	class SN_Wolga_04: CivilianSedan_Wine
 	{
 		scope=2;
 		attachments[]=
@@ -828,7 +830,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class SN_Wolga_05: CivilianSedan
+	class SN_Wolga_05: CivilianSedan_Black
 	{
 		scope=2;
 		attachments[]=
@@ -968,7 +970,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class SN_Wolga_07: CivilianSedan
+	class SN_Wolga_07: CivilianSedan_Black
 	{
 		scope=2;
 		attachments[]=
@@ -1038,7 +1040,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class SN_Wolga_08: CivilianSedan
+	class SN_Wolga_08: CivilianSedan_Black
 	{
 		scope=2;
 		attachments[]=
@@ -1249,7 +1251,9 @@ class CfgVehicles
 		};
 	};
 	class OffroadHatchback;
-	class SN_Niva_01: OffroadHatchback
+	class OffroadHatchback_White;
+	class OffroadHatchback_Blue;
+	class SN_Niva_01: OffroadHatchback_White
 	{
 		scope=2;
 		attachments[]=
@@ -1316,7 +1320,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class SN_Niva_02: OffroadHatchback
+	class SN_Niva_02: OffroadHatchback_Blue
 	{
 		scope=2;
 		attachments[]=
@@ -1517,7 +1521,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class SN_Niva_05: OffroadHatchback
+	class SN_Niva_05: OffroadHatchback_Blue
 	{
 		scope=2;
 		attachments[]=
@@ -1651,7 +1655,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class SN_Niva_07: OffroadHatchback
+	class SN_Niva_07: OffroadHatchback_White
 	{
 		scope=2;
 		attachments[]=
@@ -1718,7 +1722,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class SN_Niva_08: OffroadHatchback
+	class SN_Niva_08: OffroadHatchback_White
 	{
 		scope=2;
 		attachments[]=
@@ -1920,7 +1924,9 @@ class CfgVehicles
 		};
 	};
 	class Hatchback_02;
-	class SN_Golf2_01: Hatchback_02
+	class Hatchback_02_Black;
+	class Hatchback_02_Blue;
+	class SN_Golf2_01: Hatchback_02_Black
 	{
 		scope=2;
 		attachments[]=
@@ -1989,7 +1995,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class SN_Golf2_02: Hatchback_02
+	class SN_Golf2_02: Hatchback_02_Blue
 	{
 		scope=2;
 		attachments[]=
@@ -2127,7 +2133,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class SN_Golf2_04: Hatchback_02
+	class SN_Golf2_04: Hatchback_02_Blue
 	{
 		scope=2;
 		attachments[]=
@@ -2196,7 +2202,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class SN_Golf2_05: Hatchback_02
+	class SN_Golf2_05: Hatchback_02_Black
 	{
 		scope=2;
 		attachments[]=
@@ -2334,7 +2340,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class SN_Golf2_07: Hatchback_02
+	class SN_Golf2_07: Hatchback_02_Black
 	{
 		scope=2;
 		attachments[]=
@@ -2472,7 +2478,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class SN_Golf2_09: Hatchback_02
+	class SN_Golf2_09: Hatchback_02_Black
 	{
 		scope=2;
 		attachments[]=
@@ -2611,6 +2617,8 @@ class CfgVehicles
 		};
 	};
 	class Sedan_02;
+	class Sedan_02_Red;
+	class Sedan_02_Grey;
 	class SN_Skoda120_01: Sedan_02
 	{
 		scope=2;
@@ -2681,7 +2689,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class SN_Skoda120_02: Sedan_02
+	class SN_Skoda120_02: Sedan_02_Red
 	{
 		scope=2;
 		attachments[]=
@@ -2751,7 +2759,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class SN_Skoda120_03: Sedan_02
+	class SN_Skoda120_03: Sedan_02_Red
 	{
 		scope=2;
 		attachments[]=
@@ -2821,7 +2829,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class SN_Skoda120_04: Sedan_02
+	class SN_Skoda120_04: Sedan_02_Grey
 	{
 		scope=2;
 		attachments[]=
@@ -2961,7 +2969,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class SN_Skoda120_06: Sedan_02
+	class SN_Skoda120_06: Sedan_02_Grey
 	{
 		scope=2;
 		attachments[]=
@@ -3101,7 +3109,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class SN_Skoda120_08: Sedan_02
+	class SN_Skoda120_08: Sedan_02_Red
 	{
 		scope=2;
 		attachments[]=
