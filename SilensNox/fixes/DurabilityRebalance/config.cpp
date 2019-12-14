@@ -19,6 +19,10 @@ class CfgPatches
 class CfgVehicles
 {
 	class Inventory_Base;
+	class ItemSuppressor;
+	class FishingRod_Base_New;
+	class BrassKnuckles_ColorBase;
+	class Powered_Base;
 	class WoodAxe: Inventory_Base
 	{
 		class DamageSystem
@@ -188,7 +192,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class BrassKnuckles_Dull: Inventory_Base
+	class BrassKnuckles_Dull: BrassKnuckles_ColorBase
 	{
 		class DamageSystem
 		{
@@ -201,7 +205,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class BrassKnuckles_Shiny: Inventory_Base
+	class BrassKnuckles_Shiny: BrassKnuckles_ColorBase
 	{
 		class DamageSystem
 		{
@@ -253,7 +257,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class Chainsaw: Inventory_Base
+	class Chainsaw: Powered_Base
 	{
 		class DamageSystem
 		{
@@ -266,7 +270,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class CattleProd: Inventory_Base
+	class CattleProd: Powered_Base
 	{
 		class DamageSystem
 		{
@@ -279,7 +283,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class StunBaton: Inventory_Base
+	class StunBaton: Powered_Base
 	{
 		class DamageSystem
 		{
@@ -344,7 +348,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class Mosin_Compensator: Inventory_Base
+	class Mosin_Compensator: ItemSuppressor
 	{
 		class DamageSystem
 		{
@@ -357,7 +361,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class MP5_Compensator: Inventory_Base
+	class MP5_Compensator: ItemSuppressor
 	{
 		class DamageSystem
 		{
@@ -370,7 +374,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class M4_Suppressor: Inventory_Base
+	class M4_Suppressor: ItemSuppressor
 	{
 		class DamageSystem
 		{
@@ -383,7 +387,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class AK_Suppressor: Inventory_Base
+	class AK_Suppressor: ItemSuppressor
 	{
 		class DamageSystem
 		{
@@ -604,7 +608,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class ImprovisedFishingRod: Inventory_Base
+	class ImprovisedFishingRod: FishingRod_Base_New
 	{
 		class DamageSystem
 		{
@@ -617,7 +621,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class FishingRod: Inventory_Base
+	class FishingRod: FishingRod_Base_New
 	{
 		class DamageSystem
 		{
