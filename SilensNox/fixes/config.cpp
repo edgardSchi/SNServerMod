@@ -32,7 +32,9 @@ class CfgPatches
 			"DZ_Characters",
 			"TheRanch_Vest",
 			"Mass_Food",
-			"DZ_Characters_Belts"
+			"DZ_Characters_Belts",
+			"Munghardssimplebackpack",
+			"Munghardshikingbag"
         };
     };
 };
@@ -303,6 +305,48 @@ class CfgVehicles
 		repairableWithKits[]={5};
 		repairCosts[]={25};
 	};
+	class WeaponCleaningKit: Inventory_Base
+	{
+		varQuantityInit=250;
+		varQuantityMin=0;
+		varQuantityMax=250;
+	};
+	class SewingKit: Inventory_Base
+	{
+		varQuantityInit=250;
+		varQuantityMin=0;
+		varQuantityMax=250;
+	};
+	class LeatherSewingKit: Inventory_Base
+	{
+		varQuantityInit=250;
+		varQuantityMin=0;
+		varQuantityMax=250;
+	};
+	class ElectronicRepairKit: Inventory_Base
+	{
+		varQuantityInit=250;
+		varQuantityMin=0;
+		varQuantityMax=250;
+	};
+	class EpoxyPutty: Inventory_Base
+	{
+		varQuantityInit=250;
+		varQuantityMin=0;
+		varQuantityMax=250;
+	};
+	class Whetstone: Inventory_Base
+	{
+		varQuantityInit=250;
+		varQuantityMin=0;
+		varQuantityMax=250;
+	};
+	class DuctTape: Inventory_Base
+	{
+		varQuantityInit=250;
+		varQuantityMin=0;
+		varQuantityMax=250;
+	};
 	class PortableGasStove: Inventory_Base
 	{
 		class EnergyManager
@@ -317,7 +361,7 @@ class CfgVehicles
 			plugType=7;
 			attachmentAction=1;
 		};
-	}
+	};
 	class MilitaryBelt: Clothing
 	{
 		class DamageSystem

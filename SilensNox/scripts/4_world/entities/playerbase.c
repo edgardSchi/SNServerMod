@@ -118,7 +118,7 @@ modded class PlayerBase {
 			twoHanded.SetTwoHanded();
 			
 			GetDayZPlayerType().AddItemInHandsProfileIK("SN_Boombox", "dz/anims/workspaces/player/player_main/player_main_2h.asi", twoHanded,							"dz/anims/anm/player/ik/vehicles/BatteryTruck.anm"); 
-			
+			GetDayZPlayerType().AddItemInHandsProfileIK("NewHockeyStick", "dz/anims/workspaces/player/player_main/weapons/player_main_2h_pipewrench.asi", twoHanded,				"dz/anims/anm/player/ik/two_handed/pipewrench.anm");
 			
 			////////////////////////////////////////////////////////////////////////////////////
 			DayzPlayerItemBehaviorCfg 	heavyItemBehaviour = new DayzPlayerItemBehaviorCfg;
